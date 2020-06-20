@@ -1,0 +1,23 @@
+// Global styles
+:root {
+  --color-accent: #17252a;
+  --color-primary-dark: #2b7a78;
+  --color-primary: #3aafa9;
+  --color-contrast-light: #feffff;
+  --color-contrast: #def2f1;
+}
+
+body {
+  background-color: var(--color-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  color: var(--color-contrast);
+}

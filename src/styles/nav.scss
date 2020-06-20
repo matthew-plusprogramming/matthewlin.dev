@@ -1,0 +1,26 @@
+@use 'app/:root';
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 1.5rem 5rem;
+
+  color: var(--color-contrast);
+
+  ul {
+    display: flex;
+    flex: 1;
+
+    li {
+      font-size: 2rem;
+
+      height: 4rem;
+      margin-right: auto;
+    }
+    li:not(#brand-logo) {
+      margin: 0 2rem;
+    }
+  }
+}
