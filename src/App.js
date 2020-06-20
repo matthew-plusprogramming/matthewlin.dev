@@ -5,7 +5,7 @@ import './styles/app.scss';
 import './styles/nav.scss';
 
 // on component did mount m init
-import M from 'materialize-css';
+// import M from 'materialize-css';
 
 const App = () => (
   <>
