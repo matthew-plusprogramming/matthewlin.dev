@@ -1,2 +1,3 @@
-# matthewlin.net
-Made with HTML, MaterializeCSS, JQuery, and React
+# matthewlin.dev
+
+### Made with HTML, MaterializeCSS, JQuery, and React
