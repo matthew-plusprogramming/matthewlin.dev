@@ -2,7 +2,6 @@ import React from 'react';
 
 // Style imports
 import './materialize.scss';
-import './styles/defaults.scss';
 import './styles/app.scss';
 import './styles/nav.scss';
 
