@@ -36,22 +36,34 @@ const Sidenav = (props) => {
         className={sidenavShowing ? undefined : 'hide'}>
         <ul>
           <li>
-            <Link to={routes.about} className="waves-effect waves-dark">
+            <Link
+              to={routes.about}
+              onClick={() => setSidenavShowing(false)}
+              className="waves-effect waves-dark">
               <Info /> &nbsp; About
             </Link>
           </li>
           <li>
-            <Link to={routes.portfolio} className="waves-effect waves-dark">
+            <Link
+              to={routes.portfolio}
+              onClick={() => setSidenavShowing(false)}
+              className="waves-effect waves-dark">
               <Description /> &nbsp; Portfolio
             </Link>
           </li>
           <li>
-            <Link to={routes.testimonials} className="waves-effect waves-dark">
+            <Link
+              to={routes.testimonials}
+              onClick={() => setSidenavShowing(false)}
+              className="waves-effect waves-dark">
               <Chat /> &nbsp; Testimonials
             </Link>
           </li>
           <li>
-            <Link to={routes.contact} className="waves-effect waves-dark">
+            <Link
+              to={routes.contact}
+              onClick={() => setSidenavShowing(false)}
+              className="waves-effect waves-dark">
               <PermContactCalendar /> &nbsp; Contact
             </Link>
           </li>
