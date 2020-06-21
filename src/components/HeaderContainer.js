@@ -1,4 +1,5 @@
 import React, {useRef, useEffect, useState} from 'react';
+import {useLocation} from 'react-router-dom';
 import HeaderComponent from './HeaderComponent';
 import Sidenav from './Sidenav';
 
@@ -12,6 +13,8 @@ const Header = () => {
   const contactLinkRef = useRef(null);
 
   const [sidenavShowing, setSidenavShowing] = useState(false);
+
+  const location = useLocation();
 
   // Routes object
   const routes = {
@@ -42,10 +45,6 @@ const Header = () => {
         10,
       );
   };
-  // Handles window resizes
-  const onResizeWindow = () => {
-    onNavLinkClicked(portfolioLinkRef, true);
-  };
   // Sets the underline to the portfolio link by default
   useEffect(() => {
     if (portfolioLinkRef != null) {
@@ -54,9 +53,28 @@ const Header = () => {
   }, [portfolioLinkRef]);
   // On component did mount
   useEffect(() => {
+    // Handles window resizes
+    const onResizeWindow = () => {
+      onNavLinkClicked(
+        (() => {
+          switch (location.pathname) {
+            case '/':
+              return portfolioLinkRef;
+            case '/about':
+              return aboutLinkRef;
+            case '/testimonials':
+              return testimonialsLinkRef;
+            case '/contact':
+              return contactLinkRef;
+          }
+        })(),
+        true,
+      );
+    };
+
     window.addEventListener('resize', onResizeWindow);
     return () => window.removeEventListener('resize', onResizeWindow);
-  }, []);
+  }, [location]);
 
   return (
     <>

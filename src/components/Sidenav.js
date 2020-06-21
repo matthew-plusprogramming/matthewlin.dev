@@ -11,22 +11,23 @@ const Sidenav = (props) => {
 
   const {routes, sidenavShowing, setSidenavShowing} = props.data;
 
-  // Hide sidenav if outside click is detected
-  const handleClick = (e) => {
-    if (
-      sidenavRef.current.classList.contains('hide') ||
-      sidenavRef.current.contains(e.target)
-    )
-      return;
-
-    setSidenavShowing(false);
-  };
   useEffect(() => {
+    // Hide sidenav if outside click is detected
+    const handleClick = (e) => {
+      if (
+        sidenavRef.current.classList.contains('hide') ||
+        sidenavRef.current.contains(e.target)
+      )
+        return;
+
+      setSidenavShowing(false);
+    };
+
     document.addEventListener('mousedown', handleClick);
     return () => {
       document.removeEventListener('mousedown', handleClick);
     };
-  }, []);
+  }, [setSidenavShowing]);
 
   return (
     <div id="sidenavWrapper" className={sidenavShowing ? undefined : 'hide'}>
