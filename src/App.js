@@ -11,7 +11,7 @@ import Header from './components/HeaderContainer';
 // On component did mount m init
 import M from 'materialize-css';
 
-import hero from '../public/hero.png';
+import hero from './hero.png';
 
 const App = () => {
   M.AutoInit();
