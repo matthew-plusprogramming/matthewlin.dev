@@ -6,6 +6,7 @@ import {Menu} from '@material-ui/icons';
 
 const HeaderComponent = (props) => {
   const {
+    routes,
     underlineRef,
     aboutLinkRef,
     portfolioLinkRef,
@@ -26,14 +27,16 @@ const HeaderComponent = (props) => {
             </a>
           </li>
           <li id="brand-logo">
-            <Link to="" onClick={() => onNavLinkClicked(portfolioLinkRef)}>
+            <Link
+              to={routes.portfolio}
+              onClick={() => onNavLinkClicked(portfolioLinkRef)}>
               Matthew Lin
             </Link>
           </li>
           <li id="invisible-item"></li>
           <li>
             <Link
-              to=""
+              to={routes.about}
               onClick={() => onNavLinkClicked(aboutLinkRef)}
               ref={aboutLinkRef}>
               About
@@ -41,7 +44,7 @@ const HeaderComponent = (props) => {
           </li>
           <li>
             <Link
-              to=""
+              to={routes.portfolio}
               onClick={() => onNavLinkClicked(portfolioLinkRef)}
               ref={portfolioLinkRef}>
               Portfolio
@@ -49,7 +52,7 @@ const HeaderComponent = (props) => {
           </li>
           <li>
             <Link
-              to=""
+              to={routes.testimonials}
               onClick={() => onNavLinkClicked(testimonialsLinkRef)}
               ref={testimonialsLinkRef}>
               Testimonials
@@ -57,7 +60,7 @@ const HeaderComponent = (props) => {
           </li>
           <li>
             <Link
-              to=""
+              to={routes.contact}
               onClick={() => onNavLinkClicked(contactLinkRef)}
               ref={contactLinkRef}>
               Contact

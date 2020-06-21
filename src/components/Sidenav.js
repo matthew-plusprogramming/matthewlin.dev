@@ -9,7 +9,7 @@ import {PermContactCalendar, Info, Description, Chat} from '@material-ui/icons';
 const Sidenav = (props) => {
   const sidenavRef = useRef(null);
 
-  const {sidenavShowing, setSidenavShowing} = props.data;
+  const {routes, sidenavShowing, setSidenavShowing} = props.data;
 
   // Hide sidenav if outside click is detected
   const handleClick = (e) => {
@@ -36,22 +36,22 @@ const Sidenav = (props) => {
         className={sidenavShowing ? undefined : 'hide'}>
         <ul>
           <li>
-            <Link to="" className="waves-effect waves-dark">
+            <Link to={routes.about} className="waves-effect waves-dark">
               <Info /> &nbsp; About
             </Link>
           </li>
           <li>
-            <Link to="" className="waves-effect waves-dark">
+            <Link to={routes.portfolio} className="waves-effect waves-dark">
               <Description /> &nbsp; Portfolio
             </Link>
           </li>
           <li>
-            <Link to="" className="waves-effect waves-dark">
+            <Link to={routes.testimonials} className="waves-effect waves-dark">
               <Chat /> &nbsp; Testimonials
             </Link>
           </li>
           <li>
-            <Link to="" className="waves-effect waves-dark">
+            <Link to={routes.contact} className="waves-effect waves-dark">
               <PermContactCalendar /> &nbsp; Contact
             </Link>
           </li>

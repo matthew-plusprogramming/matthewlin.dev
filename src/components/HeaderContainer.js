@@ -13,6 +13,14 @@ const Header = () => {
 
   const [sidenavShowing, setSidenavShowing] = useState(false);
 
+  // Routes object
+  const routes = {
+    about: '/about',
+    portfolio: '/',
+    testimonials: '/testimonials',
+    contact: '/contact',
+  };
+
   // Handles moving the underline when a link is clicked
   const onNavLinkClicked = (linkRef, instant = false) => {
     const boundingRect = linkRef.current.getBoundingClientRect();
@@ -54,6 +62,7 @@ const Header = () => {
     <>
       <HeaderComponent
         data={{
+          routes: routes,
           underlineRef: underlineRef,
           aboutLinkRef: aboutLinkRef,
           portfolioLinkRef: portfolioLinkRef,
@@ -65,6 +74,7 @@ const Header = () => {
       />
       <Sidenav
         data={{
+          routes: routes,
           sidenavShowing: sidenavShowing,
           setSidenavShowing: setSidenavShowing,
         }}
