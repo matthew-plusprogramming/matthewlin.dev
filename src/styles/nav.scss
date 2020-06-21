@@ -19,6 +19,15 @@ nav {
   color: var(--color-contrast);
   background-color: var(--color-primary);
 
+  span {
+    position: absolute;
+    background-color: var(--color-contrast);
+    height: 0.25rem;
+    width: 10%;
+    z-index: -1;
+    transition: all 0.35s ease-in-out;
+  }
+
   ul {
     // Display the list of items as flex
     flex: 1;
@@ -36,18 +45,23 @@ nav {
       // Set nav item size
       width: 10rem;
       height: 4rem;
+      &#brand-logo {
+        width: 100%;
+        justify-content: flex-start;
+        > * {
+          justify-content: flex-start;
+        }
+      }
       @media #{$medium-and-down} {
         width: 8rem;
         &#brand-logo {
           width: 100%;
-          > * {
-            justify-content: flex-start;
-          }
         }
       }
       @media #{$small-and-down} {
         &#brand-logo {
           flex: 1;
+          justify-content: center;
           width: auto;
           > * {
             padding: 0;
@@ -81,7 +95,6 @@ nav {
         font-size: 1.4rem;
 
         // Center link text
-        flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -90,6 +103,9 @@ nav {
         &:hover {
           background-color: transparent;
         }
+      }
+      &#brand-logo > a {
+        font-size: 1.5rem;
       }
 
       // Media queries for site responsivity

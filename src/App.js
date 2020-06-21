@@ -6,7 +6,7 @@ import './styles/app.scss';
 import './styles/nav.scss';
 
 // Component imports
-import Header from './components/Header';
+import Header from './components/HeaderContainer';
 
 // On component did mount m init
 import M from 'materialize-css';
