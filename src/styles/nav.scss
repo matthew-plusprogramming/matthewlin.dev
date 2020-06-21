@@ -16,12 +16,12 @@ nav {
   }
 
   // Color settings
-  color: var(--color-contrast);
+  color: var(--color-contrast-light);
   background-color: var(--color-primary);
 
   span {
     position: absolute;
-    background-color: var(--color-contrast);
+    background-color: var(--color-contrast-light);
     height: 0.25rem;
     width: 10%;
     z-index: -1;
@@ -98,6 +98,9 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        // Color
+        color: var(--color-contrast-light);
 
         // On hover
         &:hover {
