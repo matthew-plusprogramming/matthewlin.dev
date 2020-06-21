@@ -1,5 +1,8 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef, useEffect, useState} from 'react';
 import HeaderComponent from './HeaderComponent';
+import Sidenav from './Sidenav';
+
+import '../styles/nav.scss';
 
 const Header = () => {
   const underlineRef = useRef(null);
@@ -7,6 +10,8 @@ const Header = () => {
   const portfolioLinkRef = useRef(null);
   const testimonialsLinkRef = useRef(null);
   const contactLinkRef = useRef(null);
+
+  const [sidenavShowing, setSidenavShowing] = useState(false);
 
   // Handles moving the underline when a link is clicked
   const onNavLinkClicked = (linkRef, instant = false) => {
@@ -46,16 +51,25 @@ const Header = () => {
   }, []);
 
   return (
-    <HeaderComponent
-      data={{
-        underlineRef: underlineRef,
-        aboutLinkRef: aboutLinkRef,
-        portfolioLinkRef: portfolioLinkRef,
-        testimonialsLinkRef: testimonialsLinkRef,
-        contactLinkRef: contactLinkRef,
-        onNavLinkClicked: onNavLinkClicked,
-      }}
-    />
+    <>
+      <HeaderComponent
+        data={{
+          underlineRef: underlineRef,
+          aboutLinkRef: aboutLinkRef,
+          portfolioLinkRef: portfolioLinkRef,
+          testimonialsLinkRef: testimonialsLinkRef,
+          contactLinkRef: contactLinkRef,
+          onNavLinkClicked: onNavLinkClicked,
+          setSidenavShowing: setSidenavShowing,
+        }}
+      />
+      <Sidenav
+        data={{
+          sidenavShowing: sidenavShowing,
+          setSidenavShowing: setSidenavShowing,
+        }}
+      />
+    </>
   );
 };
 

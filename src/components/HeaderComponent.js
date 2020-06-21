@@ -12,6 +12,7 @@ const HeaderComponent = (props) => {
     testimonialsLinkRef,
     contactLinkRef,
     onNavLinkClicked,
+    setSidenavShowing,
   } = props.data;
 
   return (
@@ -20,7 +21,7 @@ const HeaderComponent = (props) => {
         {/* Main navbar list */}
         <ul>
           <li id="sidenav-trigger">
-            <a href="#!">
+            <a href="#!" onClick={() => setSidenavShowing(true)}>
               <Menu />
             </a>
           </li>

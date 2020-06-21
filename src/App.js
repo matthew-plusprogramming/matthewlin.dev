@@ -3,7 +3,6 @@ import React from 'react';
 // Style imports
 import './materialize.scss';
 import './styles/app.scss';
-import './styles/nav.scss';
 
 // Component imports
 import Header from './components/HeaderContainer';
