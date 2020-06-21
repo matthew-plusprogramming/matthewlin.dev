@@ -66,6 +66,8 @@ const Header = () => {
               return testimonialsLinkRef;
             case '/contact':
               return contactLinkRef;
+            default:
+              return portfolioLinkRef;
           }
         })(),
         true,
