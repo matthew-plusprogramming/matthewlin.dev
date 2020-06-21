@@ -11,8 +11,6 @@ import Header from './components/HeaderContainer';
 // On component did mount m init
 import M from 'materialize-css';
 
-import hero from './hero.png';
-
 const App = () => {
   M.AutoInit();
   return (
@@ -32,7 +30,6 @@ const App = () => {
           <h1>Contact</h1>
         </Route>
       </Switch>
-      <img src={hero} alt=""></img>
     </>
   );
 };
