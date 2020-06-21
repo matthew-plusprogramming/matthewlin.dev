@@ -32,7 +32,7 @@ const App = () => {
           <h1>Contact</h1>
         </Route>
       </Switch>
-      <img src={hero}></img>
+      <img src={hero} alt=""></img>
     </>
   );
 };
