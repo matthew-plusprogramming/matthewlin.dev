@@ -1,26 +1,127 @@
-@use 'app/:root';
+@import '../materialize';
 
 nav {
+  // Display nav as flex
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
-  padding: 1.5rem 5rem;
+  // Set navbar size
+  height: 5rem;
 
+  // Basic nav padding
+  padding: 1.5rem 4rem;
+  @media #{$medium-and-down} {
+    padding: 1.5rem 1rem;
+  }
+
+  // Color settings
   color: var(--color-contrast);
+  background-color: var(--color-primary);
 
   ul {
-    display: flex;
+    // Display the list of items as flex
     flex: 1;
+    display: flex;
+    @media #{$small-and-down} {
+      justify-content: space-between;
+    }
 
     li {
-      font-size: 2rem;
+      // Center each nav item
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
+      // Set nav item size
+      width: 10rem;
       height: 4rem;
+      @media #{$medium-and-down} {
+        width: 8rem;
+        &#brand-logo {
+          width: 100%;
+          > * {
+            justify-content: flex-start;
+          }
+        }
+      }
+      @media #{$small-and-down} {
+        &#brand-logo {
+          flex: 1;
+          width: auto;
+          > * {
+            padding: 0;
+            justify-content: center;
+          }
+        }
+      }
+
+      &#sidenav-trigger,
+      &#invisible-item {
+        width: 2rem;
+        a {
+          justify-content: flex-start;
+        }
+      }
+
+      // Set #brand-logo to left align
       margin-right: auto;
-    }
-    li:not(#brand-logo) {
-      margin: 0 2rem;
+      &:not(#brand-logo) {
+        margin: 0 1.5rem;
+      }
+      @media #{$small-and-down} {
+        margin: 0;
+        &:not(#brand-logo) {
+          margin-right: auto;
+        }
+      }
+
+      > * {
+        // Link font size
+        font-size: 1.4rem;
+
+        // Center link text
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // On hover
+        &:hover {
+          background-color: transparent;
+        }
+      }
+
+      // Media queries for site responsivity
+      @media #{$medium-only} {
+        // Set font smaller font size for links
+        > * {
+          font-size: 1.2rem;
+        }
+
+        // Make brand logo font smaller since it's two words instead of one
+        &#brand-logo > a {
+          font-size: 1.5rem;
+        }
+        // Smaller margins for links except brand logo
+        &:not(#brand-logo) {
+          margin: 0 0.2rem;
+        }
+      }
+      @media #{$small-and-down} {
+        display: none;
+        &#brand-logo,
+        &#sidenav-trigger,
+        &#invisible-item {
+          display: flex;
+        }
+      }
+      @media #{$medium-and-up} {
+        &#sidenav-trigger,
+        &#invisible-item {
+          display: none;
+        }
+      }
     }
   }
 }
