@@ -10,6 +10,7 @@ import Portfolio from './Portfolio';
 
 // Component imports
 import Header from './components/HeaderContainer';
+import Footer from './components/Footer';
 
 // On component did mount m init
 import M from 'materialize-css';
@@ -33,7 +34,9 @@ const App = () => {
           <h1>Contact</h1>
         </Route>
       </Switch>
+      <Footer />
     </>
   );
 };
+
 export default App;
