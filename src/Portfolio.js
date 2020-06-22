@@ -25,9 +25,11 @@ const Portfolio = () => {
           </div>
           <div className="flex-row center">
             <a
-              href="#!"
+              href="https://github.com/matthew-plusprogramming"
+              target="_blank"
+              rel="noopener noreferrer"
               className="button waves-effect waves-light z-depth-1 fixed-width-button">
-              To Portfolio
+              View Github
             </a>
             <a
               href={resume}
