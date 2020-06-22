@@ -1,7 +1,23 @@
+@import '../materialize';
+
 #portfolio {
   .main-div {
     padding: 5rem 0;
   }
+}
+#always-learning-section {
+  padding: 8rem 8rem;
+  @media #{$medium-and-down} {
+    padding: 8rem 4rem;
+  }
+  @media #{$small-and-down} {
+    padding: 8rem 0;
+  }
+
+  background-color: var(--color-contrast);
+}
+#companies-section {
+  padding: 8rem 0;
 }
 
 #hero {

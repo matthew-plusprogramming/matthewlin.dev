@@ -31,6 +31,17 @@ p {
   margin: 0;
   color: var(--color-contrast);
 }
+.invert-colors {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: var(--color-accent);
+  }
+}
 @media #{$small-and-down} {
   h3 {
     font-size: 1.5rem !important;
@@ -95,4 +106,7 @@ div.main-div {
 }
 .bottom-margin {
   margin-bottom: 1rem;
+}
+.large-bottom-margin {
+  margin-bottom: 3rem;
 }
