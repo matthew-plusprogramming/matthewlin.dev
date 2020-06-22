@@ -5,7 +5,7 @@ const CompanyTile = (props) => {
   const {img, title, path} = props.data;
   return (
     <div className="company-tile z-depth-5">
-      <img src={img}></img>
+      <img src={img} alt=""></img>
       <p className="tile-title">{title}</p>
       <p className="tile-main">{props.children}</p>
       <div className="ghost"></div>
