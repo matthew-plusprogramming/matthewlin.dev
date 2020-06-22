@@ -31,10 +31,7 @@ p {
 }
 
 // Flex positioning
-.row {
-  // Reset row styles set by materializecss
-  all: initial;
-
+.flex-row {
   // Set flex display
   display: flex;
   flex-direction: row;
