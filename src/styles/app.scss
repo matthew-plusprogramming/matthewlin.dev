@@ -49,6 +49,9 @@ p {
   h5 {
     font-size: 1rem !important;
   }
+  h6 {
+    font-size: 0.8rem !important;
+  }
 }
 
 // Flex positioning
@@ -56,6 +59,11 @@ p {
   // Set flex display
   display: flex;
   flex-direction: row;
+}
+.flex-col {
+  // Set flex display
+  display: flex;
+  flex-direction: column;
 }
 .center {
   justify-content: center;
