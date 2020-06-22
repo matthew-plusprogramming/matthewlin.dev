@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles/portfolio.scss';
 
-import hero from './hero.png';
+import hero from './res/hero.png';
 
 const Portfolio = () => {
   return (
