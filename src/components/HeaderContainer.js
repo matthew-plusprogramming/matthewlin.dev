@@ -1,51 +1,22 @@
-import React, {useRef, useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {useLocation} from 'react-router-dom';
 import HeaderComponent from './HeaderComponent';
 import Sidenav from './Sidenav';
 
+import {NavigationContext} from '../contexts/NavigationContext';
+
 import '../styles/nav.scss';
 
-const Header = () => {
-  const underlineRef = useRef(null);
-  const aboutLinkRef = useRef(null);
-  const portfolioLinkRef = useRef(null);
-  const testimonialsLinkRef = useRef(null);
-  const contactLinkRef = useRef(null);
+import {routes} from './constants';
 
+const Header = () => {
   const [sidenavShowing, setSidenavShowing] = useState(false);
   const [atTop, setAtTop] = useState(true);
 
+  const navContext = useContext(NavigationContext);
+
   const location = useLocation();
 
-  // Routes object
-  const routes = {
-    about: '/about',
-    portfolio: '/',
-    testimonials: '/testimonials',
-    contact: '/contact',
-  };
-
-  // Handles moving the underline when a link is clicked
-  const onNavLinkClicked = (linkRef, instant = false) => {
-    const boundingRect = linkRef.current.getBoundingClientRect();
-
-    const width = boundingRect.width;
-    const height = boundingRect.height;
-    const left = boundingRect.left;
-    const top = boundingRect.top;
-
-    instant && (underlineRef.current.style.transition = 'none');
-    underlineRef.current.style.width = `${width}px`;
-    underlineRef.current.style.height = `3px`;
-    underlineRef.current.style.left = `${left}px`;
-    underlineRef.current.style.top = `${top + height - 10}px`;
-    underlineRef.current.style.transform = 'none';
-    instant &&
-      setTimeout(
-        () => (underlineRef.current.style.transition = 'all 0.35s ease-in-out'),
-        10,
-      );
-  };
   // Update nav shadow when scrolling
   document.onscroll = () => {
     let scrollTop = document.documentElement.scrollTop;
@@ -58,27 +29,27 @@ const Header = () => {
   };
   // Sets the underline to the portfolio link by default
   useEffect(() => {
-    if (portfolioLinkRef != null) {
-      onNavLinkClicked(portfolioLinkRef, true);
+    if (navContext.portfolioLinkRef != null) {
+      navContext.updateNavLocation(navContext.portfolioLinkRef, true);
     }
-  }, [portfolioLinkRef]);
+  }, [navContext]);
   // On component did mount
   useEffect(() => {
     // Handles window resizes
     const onResizeWindow = () => {
-      onNavLinkClicked(
+      navContext.updateNavLocation(
         (() => {
           switch (location.pathname) {
             case '/':
-              return portfolioLinkRef;
+              return navContext.portfolioLinkRef;
             case '/about':
-              return aboutLinkRef;
+              return navContext.aboutLinkRef;
             case '/testimonials':
-              return testimonialsLinkRef;
+              return navContext.testimonialsLinkRef;
             case '/contact':
-              return contactLinkRef;
+              return navContext.contactLinkRef;
             default:
-              return portfolioLinkRef;
+              return navContext.portfolioLinkRef;
           }
         })(),
         true,
@@ -87,20 +58,20 @@ const Header = () => {
 
     window.addEventListener('resize', onResizeWindow);
     return () => window.removeEventListener('resize', onResizeWindow);
-  }, [location]);
+  }, [location, navContext]);
 
   return (
     <>
       <HeaderComponent
         data={{
           routes: routes,
-          underlineRef: underlineRef,
-          aboutLinkRef: aboutLinkRef,
-          portfolioLinkRef: portfolioLinkRef,
-          testimonialsLinkRef: testimonialsLinkRef,
-          contactLinkRef: contactLinkRef,
+          underlineRef: navContext.underlineRef,
+          aboutLinkRef: navContext.aboutLinkRef,
+          portfolioLinkRef: navContext.portfolioLinkRef,
+          testimonialsLinkRef: navContext.testimonialsLinkRef,
+          contactLinkRef: navContext.contactLinkRef,
           atTop: atTop,
-          onNavLinkClicked: onNavLinkClicked,
+          updateNavLocation: navContext.updateNavLocation,
           setSidenavShowing: setSidenavShowing,
         }}
       />

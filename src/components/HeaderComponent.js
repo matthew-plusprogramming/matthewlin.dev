@@ -13,7 +13,7 @@ const HeaderComponent = (props) => {
     testimonialsLinkRef,
     contactLinkRef,
     atTop,
-    onNavLinkClicked,
+    updateNavLocation,
     setSidenavShowing,
   } = props.data;
 
@@ -30,7 +30,7 @@ const HeaderComponent = (props) => {
           <li id="brand-logo">
             <Link
               to={routes.portfolio}
-              onClick={() => onNavLinkClicked(portfolioLinkRef)}>
+              onClick={() => updateNavLocation(portfolioLinkRef)}>
               Matthew Lin
             </Link>
           </li>
@@ -38,7 +38,7 @@ const HeaderComponent = (props) => {
           <li>
             <Link
               to={routes.about}
-              onClick={() => onNavLinkClicked(aboutLinkRef)}
+              onClick={() => updateNavLocation(aboutLinkRef)}
               ref={aboutLinkRef}>
               About
             </Link>
@@ -46,7 +46,7 @@ const HeaderComponent = (props) => {
           <li>
             <Link
               to={routes.portfolio}
-              onClick={() => onNavLinkClicked(portfolioLinkRef)}
+              onClick={() => updateNavLocation(portfolioLinkRef)}
               ref={portfolioLinkRef}>
               Portfolio
             </Link>
@@ -54,7 +54,7 @@ const HeaderComponent = (props) => {
           <li>
             <Link
               to={routes.testimonials}
-              onClick={() => onNavLinkClicked(testimonialsLinkRef)}
+              onClick={() => updateNavLocation(testimonialsLinkRef)}
               ref={testimonialsLinkRef}>
               Testimonials
             </Link>
@@ -62,7 +62,7 @@ const HeaderComponent = (props) => {
           <li>
             <Link
               to={routes.contact}
-              onClick={() => onNavLinkClicked(contactLinkRef)}
+              onClick={() => updateNavLocation(contactLinkRef)}
               ref={contactLinkRef}>
               Contact
             </Link>
