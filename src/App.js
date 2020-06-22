@@ -5,6 +5,9 @@ import {Switch, Route} from 'react-router-dom';
 import './materialize.scss';
 import './styles/app.scss';
 
+// Page imports
+import Portfolio from './Portfolio';
+
 // Component imports
 import Header from './components/HeaderContainer';
 
@@ -21,7 +24,7 @@ const App = () => {
           <h1>About</h1>
         </Route>
         <Route exact path="/">
-          <h1>Portfolio</h1>
+          <Portfolio />
         </Route>
         <Route path="/testimonials">
           <h1>Testimonials</h1>
