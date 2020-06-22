@@ -44,11 +44,13 @@ const Portfolio = () => {
             <img id="hero" src={hero} alt="" />
           </div>
         </div>
-        <div id="always-learning-section" className="invert-colors">
+        <div id="about-me-section" className="invert-colors">
           <div className="flex-row center">
-            <h4 className="large-bottom-margin">Always Learning!</h4>
+            <h4 className="large-bottom-margin medium-text">
+              Hi, I'm Matthew, a passionate software developer.
+            </h4>
           </div>
-          <div className="flex-row center">
+          <div className="flex-row center large-bottom-margin">
             <p className="flow-text">
               Since beginning my journey as a budding programmer almost four
               years ago, I've explored a wide range of computer science related
@@ -56,6 +58,14 @@ const Portfolio = () => {
               freelance programming projects. In addition to theoretical and
               personal practical knowledge, I also have two summers of
               professional work experience as a software engineer.
+            </p>
+          </div>
+          <div className="flex-row center large-bottom-margin">
+            <p className="flow-text">
+              I try my best to take initiative, be a natural leader, and
+              communicate with teammates & clients to get the job done. I may
+              not know everything yet, but I'm constantly working to improve and
+              expand my skillset!
             </p>
           </div>
         </div>
