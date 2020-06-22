@@ -22,12 +22,11 @@ const Footer = () => {
           </a>
         </h5>
       </div>
-      <div className="flex-row">
+      <div className="flex-row large-bottom-margin">
         <div id="footer-left">
           <div className="flex-row">
             <div className="flex-col">
               <h5 className="light-text">Pages</h5>
-
               <h6>
                 <Link
                   to={routes.about}
@@ -98,6 +97,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex-row">
+        <h6 className="light-text">Copyright &copy; 2019 - 2020 Matthew Lin</h6>
       </div>
     </footer>
   );
