@@ -40,7 +40,10 @@
     padding: 8rem 4rem;
   }
   @media #{$small-and-down} {
-    padding: 8rem 0;
+    padding: 8rem 1.2rem;
+    p.flow-text {
+      font-size: 1.4rem;
+    }
   }
 
   background-color: var(--color-contrast);
