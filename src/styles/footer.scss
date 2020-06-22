@@ -5,5 +5,11 @@ footer {
     color: var(--color-primary-dark);
   }
 
+  // Spacing for footer menu
+  #footer-left,
+  #footer-right {
+    flex: 1;
+  }
+
   background-color: var(--color-accent);
 }
