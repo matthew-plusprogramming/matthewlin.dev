@@ -35,6 +35,7 @@
     // Positioning and sizing
     position: absolute;
     width: 24rem;
+    max-width: 90%;
     height: 100%;
     z-index: 1001;
     background-color: var(--color-contrast);
