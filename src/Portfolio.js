@@ -12,7 +12,7 @@ const Portfolio = () => {
   return (
     <>
       <main id="portfolio">
-        <div className="main-div">
+        <div id="landing-page" className="main-div">
           <div className="flex-row center">
             <h3 className="no-margin medium-text">
               Full Stack Software Developer

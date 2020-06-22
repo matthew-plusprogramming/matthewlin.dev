@@ -5,6 +5,33 @@
     padding: 5rem 0;
   }
 }
+#landing-page {
+  opacity: 0;
+  animation: fadeInUp 0.7s both;
+  -webkit-animation: fadeInUp 0.7s both;
+
+  @keyframes fadeInUp {
+    from {
+      transform: translate(0, 2rem);
+    }
+
+    to {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadeInUp {
+    from {
+      transform: translate(0, 2rem);
+    }
+
+    to {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+}
 #always-learning-section {
   // Padding for the always learning section
   padding: 8rem 8rem;
