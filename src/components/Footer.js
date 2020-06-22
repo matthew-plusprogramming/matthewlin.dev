@@ -71,6 +71,30 @@ const Footer = () => {
           <div className="flex-row">
             <div className="flex-col">
               <h5 className="light-text">Find me Online</h5>
+              <h6>
+                <a
+                  href="https://github.com/matthew-plusprogramming"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Github
+                </a>
+              </h6>
+              <h6>
+                <a
+                  href="https://instagram.com/matthew.plusprogramming"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Instagram
+                </a>
+              </h6>
+              <h6>
+                <a
+                  href="https://linkedin.com/in/matthewlin-sd"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  LinkedIn
+                </a>
+              </h6>
             </div>
           </div>
         </div>
