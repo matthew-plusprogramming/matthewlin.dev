@@ -29,6 +29,7 @@ const Portfolio = () => {
             <a
               href={resume}
               target="_blank"
+              rel="noopener noreferrer"
               className="button waves-effect waves-light z-depth-1 fixed-width-button">
               View Resume
             </a>
