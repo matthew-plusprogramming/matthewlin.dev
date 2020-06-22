@@ -6,6 +6,7 @@
   }
 }
 #always-learning-section {
+  // Padding for the always learning section
   padding: 8rem 8rem;
   @media #{$medium-and-down} {
     padding: 8rem 4rem;
@@ -18,8 +19,101 @@
 }
 #companies-section {
   padding: 8rem 0;
+  background-color: var(--color-accent);
+
+  // Make it so that tiles display on different lines on small screens
+  @media #{$small-and-down} {
+    > div {
+      flex-direction: column;
+    }
+  }
+}
+#company-tiles {
+  display: flex;
+  flex-direction: row;
+  @media #{$small-and-down} {
+    flex-direction: column;
+  }
+  justify-content: center;
+  align-items: center;
+}
+.company-tile {
+  // Sizing
+  width: 30rem;
+  height: 30rem;
+  @media #{$medium-and-down} {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  margin: 0 2rem;
+  padding: 1rem 1rem;
+  @media #{$small-and-down} {
+    margin: 2rem 0;
+  }
+
+  // Flex settings
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--color-accent);
+
+  img {
+    animation: fadeIn ease 0.35s;
+    -webkit-animation: fadeIn ease 0.35s;
+    width: 100%;
+    height: 100%;
+  }
+  p,
+  a {
+    display: none;
+    text-align: center;
+  }
+
+  &:hover {
+    // Hide image and show content on hover
+    img {
+      display: none;
+    }
+    p,
+    a {
+      animation: fadeIn ease 0.35s;
+      -webkit-animation: fadeIn ease 0.35s;
+      display: block;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+// Components of tile
+.tile-title {
+  font-size: 2rem;
+}
+.tile-main {
+  font-size: 1.2rem;
+}
+.tile-footer {
+  font-size: 1.5rem;
 }
 
+// Hero icon
 #hero {
   width: 50rem;
   max-width: 100vw;

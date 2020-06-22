@@ -1,9 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import './styles/portfolio.scss';
 
 import hero from './res/hero.png';
 import resume from './res/Matthew_Lin_Resume.pdf';
+import robolink from './res/robolink.png';
+import programination from './res/programination.png';
+
+import CompanyTile from './components/Portfolio/CompanyTile';
 
 const Portfolio = () => {
   return (
@@ -40,10 +45,10 @@ const Portfolio = () => {
           </div>
         </div>
         <div id="always-learning-section" className="invert-colors">
-          <div className="row center">
+          <div className="flex-row center">
             <h4 className="large-bottom-margin">Always Learning!</h4>
           </div>
-          <div className="row center">
+          <div className="flex-row center">
             <p className="flow-text">
               Since beginning my journey as a budding programmer almost four
               years ago, I've explored a wide range of computer science related
@@ -55,8 +60,29 @@ const Portfolio = () => {
           </div>
         </div>
         <div id="companies-section">
-          <div className="row center">
+          <div className="flex-row center">
             <h4 className="large-bottom-margin">Companies I've Worked With</h4>
+          </div>
+          <div id="company-tiles">
+            <CompanyTile
+              data={{
+                img: robolink,
+                title: 'Robolink',
+                path: '/work-experience/robolink',
+              }}>
+              Teaching STEM to kids of all ages. Holds year around robotics
+              camps & produces educational STEM materials.
+            </CompanyTile>
+
+            <CompanyTile
+              data={{
+                img: programination,
+                title: 'Programination',
+                path: '/work-experience/programination',
+              }}>
+              Creating high quality web and mobile applications of all kinds for
+              clients.
+            </CompanyTile>
           </div>
         </div>
       </main>
