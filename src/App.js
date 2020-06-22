@@ -22,16 +22,16 @@ const App = () => {
       <Header />
       <Switch>
         <Route path="/about">
-          <h1>About</h1>
+          <div className="main-div"></div>
         </Route>
         <Route exact path="/">
           <Portfolio />
         </Route>
         <Route path="/testimonials">
-          <h1>Testimonials</h1>
+          <div className="main-div"></div>
         </Route>
         <Route path="/contact">
-          <h1>Contact</h1>
+          <div className="main-div"></div>
         </Route>
       </Switch>
       <Footer />
