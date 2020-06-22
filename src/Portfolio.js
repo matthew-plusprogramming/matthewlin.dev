@@ -3,6 +3,7 @@ import React from 'react';
 import './styles/portfolio.scss';
 
 import hero from './res/hero.png';
+import resume from './res/Matthew_Lin_Resume.pdf';
 
 const Portfolio = () => {
   return (
@@ -26,7 +27,8 @@ const Portfolio = () => {
               To Portfolio
             </a>
             <a
-              href="#!"
+              href={resume}
+              target="_blank"
               className="button waves-effect waves-light z-depth-1 fixed-width-button">
               View Resume
             </a>
