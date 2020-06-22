@@ -13,6 +13,7 @@ const Header = () => {
   const contactLinkRef = useRef(null);
 
   const [sidenavShowing, setSidenavShowing] = useState(false);
+  const [atTop, setAtTop] = useState(true);
 
   const location = useLocation();
 
@@ -44,6 +45,16 @@ const Header = () => {
         () => (underlineRef.current.style.transition = 'all 0.35s ease-in-out'),
         10,
       );
+  };
+  // Update nav shadow when scrolling
+  document.onscroll = () => {
+    let scrollTop = document.documentElement.scrollTop;
+    console.log(scrollTop);
+    if (scrollTop === 0) {
+      setAtTop(true);
+    } else if (atTop) {
+      setAtTop(false);
+    }
   };
   // Sets the underline to the portfolio link by default
   useEffect(() => {
@@ -88,6 +99,7 @@ const Header = () => {
           portfolioLinkRef: portfolioLinkRef,
           testimonialsLinkRef: testimonialsLinkRef,
           contactLinkRef: contactLinkRef,
+          atTop: atTop,
           onNavLinkClicked: onNavLinkClicked,
           setSidenavShowing: setSidenavShowing,
         }}

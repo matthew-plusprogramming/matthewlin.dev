@@ -12,13 +12,14 @@ const HeaderComponent = (props) => {
     portfolioLinkRef,
     testimonialsLinkRef,
     contactLinkRef,
+    atTop,
     onNavLinkClicked,
     setSidenavShowing,
   } = props.data;
 
   return (
     <header className="navbar-fixed">
-      <nav className="z-depth-0 nav-wrapper">
+      <nav className={'nav-wrapper ' + (atTop ? '' : 'shadow')}>
         {/* Main navbar list */}
         <ul>
           <li id="sidenav-trigger">
