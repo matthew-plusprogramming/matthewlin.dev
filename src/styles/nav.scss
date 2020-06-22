@@ -1,144 +1,146 @@
 @import '../materialize';
 
-nav {
-  // Display nav as flex
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-
+header {
   // Set navbar size
-  height: 5rem;
+  height: var(--navbar-height) !important;
 
-  // Basic nav padding
-  padding: 1.5rem 4rem;
-  @media #{$medium-and-down} {
-    padding: 1.5rem 1rem;
-  }
-
-  // Color settings
-  color: var(--color-contrast-light);
-  background-color: var(--color-primary);
-
-  span {
-    position: absolute;
-    background-color: var(--color-contrast-light);
-    height: 0.25rem;
-    width: 10%;
-    z-index: -1;
-    transition: all 0.35s ease-in-out;
-  }
-
-  ul {
-    // Display the list of items as flex
-    flex: 1;
+  nav {
+    // Display nav as flex
     display: flex;
-    @media #{$small-and-down} {
-      justify-content: space-between;
+    justify-content: flex-end;
+    align-items: center;
+
+    // Basic nav padding
+    padding: 1.5rem 4rem;
+    @media #{$medium-and-down} {
+      padding: 1.5rem 1rem;
     }
 
-    li {
-      // Center each nav item
+    // Color settings
+    color: var(--color-contrast-light);
+    background-color: var(--color-primary);
+
+    span {
+      position: absolute;
+      background-color: var(--color-contrast-light);
+      height: 0.25rem;
+      width: 10%;
+      z-index: -1;
+      transition: all 0.35s ease-in-out;
+    }
+
+    ul {
+      // Display the list of items as flex
+      flex: 1;
       display: flex;
-      justify-content: center;
-      align-items: center;
-
-      // Set nav item size
-      width: 10rem;
-      height: 4rem;
-      &#brand-logo {
-        width: 100%;
-        justify-content: flex-start;
-        > * {
-          justify-content: flex-start;
-        }
-      }
-      @media #{$medium-and-down} {
-        width: 8rem;
-        &#brand-logo {
-          width: 100%;
-        }
-      }
       @media #{$small-and-down} {
-        &#brand-logo {
-          flex: 1;
-          justify-content: center;
-          width: auto;
-          > * {
-            padding: 0;
-            justify-content: center;
-          }
-        }
+        justify-content: space-between;
       }
 
-      &#sidenav-trigger,
-      &#invisible-item {
-        width: 2rem;
-        a {
-          justify-content: flex-start;
-        }
-      }
-
-      // Set #brand-logo to left align
-      margin-right: auto;
-      &:not(#brand-logo) {
-        margin: 0 1.5rem;
-      }
-      @media #{$small-and-down} {
-        margin: 0;
-        &:not(#brand-logo) {
-          margin-right: auto;
-        }
-      }
-
-      > * {
-        // Link font size
-        font-size: 1.4rem;
-
-        // Center link text
+      li {
+        // Center each nav item
         display: flex;
         justify-content: center;
         align-items: center;
 
-        // Color
-        color: var(--color-contrast-light);
-
-        // On hover
-        &:hover {
-          background-color: transparent;
+        // Set nav item size
+        width: 10rem;
+        height: 4rem;
+        &#brand-logo {
+          width: 100%;
+          justify-content: flex-start;
+          > * {
+            justify-content: flex-start;
+          }
         }
-      }
-      &#brand-logo > a {
-        font-size: 2rem;
-      }
-
-      // Media queries for site responsivity
-      @media #{$medium-only} {
-        // Set font smaller font size for links
-        > * {
-          font-size: 1.2rem;
+        @media #{$medium-and-down} {
+          width: 8rem;
+          &#brand-logo {
+            width: 100%;
+          }
+        }
+        @media #{$small-and-down} {
+          &#brand-logo {
+            flex: 1;
+            justify-content: center;
+            width: auto;
+            > * {
+              padding: 0;
+              justify-content: center;
+            }
+          }
         }
 
-        // Make brand logo font smaller since it's two words instead of one
-        &#brand-logo > a {
-          font-size: 1.5rem;
+        &#sidenav-trigger,
+        &#invisible-item {
+          width: 2rem;
+          a {
+            justify-content: flex-start;
+          }
         }
-        // Smaller margins for links except brand logo
+
+        // Set #brand-logo to left align
+        margin-right: auto;
         &:not(#brand-logo) {
-          margin: 0 0.2rem;
+          margin: 0 1.5rem;
         }
-      }
-      @media #{$small-and-down} {
-        display: none;
-        &#brand-logo,
-        &#sidenav-trigger,
-        &#invisible-item {
+        @media #{$small-and-down} {
+          margin: 0;
+          &:not(#brand-logo) {
+            margin-right: auto;
+          }
+        }
+
+        > * {
+          // Link font size
+          font-size: 1.4rem;
+
+          // Center link text
           display: flex;
+          justify-content: center;
+          align-items: center;
+
+          // Color
+          color: var(--color-contrast-light);
+
+          // On hover
+          &:hover {
+            background-color: transparent;
+          }
         }
-      }
-      @media #{$medium-and-up} {
-        &#sidenav-trigger,
-        &#invisible-item {
+        &#brand-logo > a {
+          font-size: 2rem;
+        }
+
+        // Media queries for site responsivity
+        @media #{$medium-only} {
+          // Set font smaller font size for links
+          > * {
+            font-size: 1.2rem;
+          }
+
+          // Make brand logo font smaller since it's two words instead of one
+          &#brand-logo > a {
+            font-size: 1.5rem;
+          }
+          // Smaller margins for links except brand logo
+          &:not(#brand-logo) {
+            margin: 0 0.2rem;
+          }
+        }
+        @media #{$small-and-down} {
           display: none;
+          &#brand-logo,
+          &#sidenav-trigger,
+          &#invisible-item {
+            display: flex;
+          }
+        }
+        @media #{$medium-and-up} {
+          &#sidenav-trigger,
+          &#invisible-item {
+            display: none;
+          }
         }
       }
     }
