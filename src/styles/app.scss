@@ -1,3 +1,5 @@
+@import '../materialize';
+
 // Global styles
 :root {
   --color-accent: #17252a;
@@ -29,6 +31,14 @@ p {
   margin: 0;
   color: var(--color-contrast);
 }
+@media #{$small-and-down} {
+  h3 {
+    font-size: 1.5rem !important;
+  }
+  h5 {
+    font-size: 1rem !important;
+  }
+}
 
 // Flex positioning
 .flex-row {
@@ -43,12 +53,46 @@ p {
   align-items: center;
 }
 
+// Buttons
+.button {
+  padding: 1rem 3rem;
+  margin: 0 1rem;
+  border-radius: 1rem;
+
+  color: var(--color-contrast-light);
+}
+.fixed-width-button {
+  width: 20rem;
+}
+@media #{$small-and-down} {
+  .button {
+    padding: 0.5rem 1rem;
+  }
+}
+
+// Text classes
+.thin-text {
+  font-weight: 100;
+}
+.light-text {
+  font-weight: 300;
+}
+.medium-text {
+  font-weight: 500;
+}
+.semibold-text {
+  font-weight: 600;
+}
+
 // Shared styles
-main {
+div.main-div {
   min-height: var(--page-height);
 }
 
 // Utility styles
 .no-margin {
   margin: 0;
+}
+.bottom-margin {
+  margin-bottom: 1rem;
 }
