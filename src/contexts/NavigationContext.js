@@ -9,7 +9,11 @@ const NavigationContextProvider = (props) => {
   const contactLinkRef = useRef(null);
 
   // Handles moving the underline when a link is clicked
-  const updateNavLocation = (linkRef, instant = false) => {
+  const updateNavLocation = (
+    linkRef,
+    instant = false,
+    fullRedirect = false,
+  ) => {
     const boundingRect = linkRef.current.getBoundingClientRect();
 
     const width = boundingRect.width;
@@ -28,6 +32,8 @@ const NavigationContextProvider = (props) => {
         () => (underlineRef.current.style.transition = 'all 0.35s ease-in-out'),
         10,
       );
+
+    if (fullRedirect) document.documentElement.scrollTop = 0;
   };
 
   return (
