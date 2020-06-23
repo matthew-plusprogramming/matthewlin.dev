@@ -6,7 +6,7 @@ import resume from './res/Matthew_Lin_Resume.pdf';
 import robolink from './res/robolink.png';
 import programination from './res/programination.png';
 
-import CompanyTile from './components/Portfolio/CompanyTile';
+import HoverTile from './components/Portfolio/HoverTile';
 
 const Portfolio = () => {
   return (
@@ -74,7 +74,7 @@ const Portfolio = () => {
             <h4 className="large-bottom-margin">Companies I've Worked With</h4>
           </div>
           <div id="company-tiles">
-            <CompanyTile
+            <HoverTile
               data={{
                 img: robolink,
                 title: 'Robolink',
@@ -82,9 +82,9 @@ const Portfolio = () => {
               }}>
               Teaching STEM to kids of all ages. Holds year around robotics
               camps & produces educational STEM materials.
-            </CompanyTile>
+            </HoverTile>
 
-            <CompanyTile
+            <HoverTile
               data={{
                 img: programination,
                 title: 'Programination',
@@ -92,7 +92,7 @@ const Portfolio = () => {
               }}>
               Creating high quality web and mobile applications of all kinds for
               clients.
-            </CompanyTile>
+            </HoverTile>
           </div>
         </div>
       </main>
