@@ -20,7 +20,6 @@ const Header = () => {
   // Update nav shadow when scrolling
   document.onscroll = () => {
     let scrollTop = document.documentElement.scrollTop;
-    console.log(scrollTop);
     if (scrollTop === 0) {
       setAtTop(true);
     } else if (atTop) {
