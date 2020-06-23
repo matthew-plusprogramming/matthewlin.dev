@@ -59,6 +59,10 @@
     }
   }
 }
+#projects-section {
+  padding: 8rem 0;
+  background-color: var(--color-primary);
+}
 #company-tiles {
   display: flex;
   flex-direction: row;
@@ -78,9 +82,10 @@
   }
 
   margin: 0 2rem;
-  padding: 1rem 1rem;
+  padding: 2rem 2rem;
   @media #{$small-and-down} {
     margin: 2rem 0;
+    padding: 1rem 1rem;
   }
 
   // Flex settings
@@ -101,6 +106,9 @@
   a {
     display: none;
     text-align: center;
+  }
+  a {
+    color: var(--color-primary);
   }
 
   &:hover {
@@ -133,15 +141,32 @@
     }
   }
 }
+.invert-tile-colors {
+  .hover-tile {
+    background-color: var(--color-contrast);
+    p {
+      color: var(--color-accent);
+    }
+  }
+}
 // Components of tile
 .tile-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
+  @media #{$small-and-down} {
+    font-size: 2rem;
+  }
 }
 .tile-main {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  @media #{$small-and-down} {
+    font-size: 1.2rem;
+  }
 }
 .tile-footer {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  @media #{$small-and-down} {
+    font-size: 1.5rem;
+  }
 }
 
 // Hero icon
