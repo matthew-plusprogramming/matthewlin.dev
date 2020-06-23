@@ -1,3 +1,3 @@
 # matthewlin.dev
 
-### Made with HTML, MaterializeCSS, JQuery, and React
+### My Portfolio website made with HTML, MaterializeCSS, JQuery, and React
