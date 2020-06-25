@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 
 import {NavigationContext} from '../contexts/NavigationContext';
 
@@ -9,6 +9,8 @@ import {routes} from './constants';
 
 const Footer = () => {
   const navContext = useContext(NavigationContext);
+
+  const location = useLocation();
 
   return (
     <footer>
@@ -36,6 +38,11 @@ const Footer = () => {
                       false,
                       true,
                     )
+                  }
+                  className={
+                    location.pathname === routes.about
+                      ? 'footer-selected'
+                      : undefined
                   }>
                   About
                 </Link>
@@ -49,6 +56,11 @@ const Footer = () => {
                       false,
                       true,
                     )
+                  }
+                  className={
+                    location.pathname === routes.portfolio
+                      ? 'footer-selected'
+                      : undefined
                   }>
                   Portfolio
                 </Link>
@@ -62,6 +74,11 @@ const Footer = () => {
                       false,
                       true,
                     )
+                  }
+                  className={
+                    location.pathname === routes.testimonials
+                      ? 'footer-selected'
+                      : undefined
                   }>
                   Testimonials
                 </Link>
@@ -75,6 +92,11 @@ const Footer = () => {
                       false,
                       true,
                     )
+                  }
+                  className={
+                    location.pathname === routes.contact
+                      ? 'footer-selected'
+                      : undefined
                   }>
                   Contact
                 </Link>
