@@ -1,8 +1,6 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 
-import {NavigationContext} from './contexts/NavigationContext';
-
 // Style imports
 import './materialize.scss';
 import './styles/app.scss';
