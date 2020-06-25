@@ -1,12 +1,15 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 
+import {NavigationContext} from './contexts/NavigationContext';
+
 // Style imports
 import './materialize.scss';
 import './styles/app.scss';
 
 // Page imports
 import Portfolio from './Portfolio';
+import About from './About';
 
 // Component imports
 import Header from './components/HeaderContainer';
@@ -22,7 +25,7 @@ const App = () => {
       <Header />
       <Switch>
         <Route path="/about">
-          <div className="main-div"></div>
+          <About />
         </Route>
         <Route exact path="/">
           <Portfolio />

@@ -1,5 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {useLocation} from 'react-router-dom';
+
 import HeaderComponent from './HeaderComponent';
 import Sidenav from './Sidenav';
 
@@ -56,6 +57,7 @@ const Header = () => {
     };
 
     window.addEventListener('resize', onResizeWindow);
+    onResizeWindow();
     return () => window.removeEventListener('resize', onResizeWindow);
   }, [location, navContext]);
 
