@@ -39,13 +39,13 @@ const Header = () => {
       navContext.updateNavLocation(
         (() => {
           switch (location.pathname) {
-            case '/':
+            case routes.portfolio:
               return navContext.portfolioLinkRef;
-            case '/about':
+            case routes.about:
               return navContext.aboutLinkRef;
-            case '/testimonials':
+            case routes.testimonials:
               return navContext.testimonialsLinkRef;
-            case '/contact':
+            case routes.contact:
               return navContext.contactLinkRef;
             default:
               return navContext.portfolioLinkRef;
