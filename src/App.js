@@ -3,6 +3,7 @@ import {Switch, Route} from 'react-router-dom';
 
 // Style imports
 import './materialize.scss';
+import './styles/animations.scss';
 import './styles/app.scss';
 
 // Page imports
