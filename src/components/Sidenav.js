@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 
 import '../styles/sidenav.scss';
 
@@ -8,6 +8,8 @@ import {PermContactCalendar, Info, Description, Chat} from '@material-ui/icons';
 
 const Sidenav = (props) => {
   const sidenavRef = useRef(null);
+
+  const location = useLocation();
 
   const {routes, sidenavShowing, setSidenavShowing} = props.data;
 
@@ -40,7 +42,10 @@ const Sidenav = (props) => {
             <Link
               to={routes.about}
               onClick={() => setSidenavShowing(false)}
-              className="waves-effect waves-dark">
+              className={
+                'waves-effect waves-dark ' +
+                (location.pathname === routes.about ? 'sidenav-selected' : '')
+              }>
               <Info /> &nbsp; About
             </Link>
           </li>
@@ -48,7 +53,12 @@ const Sidenav = (props) => {
             <Link
               to={routes.portfolio}
               onClick={() => setSidenavShowing(false)}
-              className="waves-effect waves-dark">
+              className={
+                'waves-effect waves-dark ' +
+                (location.pathname === routes.portfolio
+                  ? 'sidenav-selected'
+                  : '')
+              }>
               <Description /> &nbsp; Portfolio
             </Link>
           </li>
@@ -56,7 +66,12 @@ const Sidenav = (props) => {
             <Link
               to={routes.testimonials}
               onClick={() => setSidenavShowing(false)}
-              className="waves-effect waves-dark">
+              className={
+                'waves-effect waves-dark ' +
+                (location.pathname === routes.testimonials
+                  ? 'sidenav-selected'
+                  : '')
+              }>
               <Chat /> &nbsp; Testimonials
             </Link>
           </li>
@@ -64,7 +79,10 @@ const Sidenav = (props) => {
             <Link
               to={routes.contact}
               onClick={() => setSidenavShowing(false)}
-              className="waves-effect waves-dark">
+              className={
+                'waves-effect waves-dark ' +
+                (location.pathname === routes.contact ? 'sidenav-selected' : '')
+              }>
               <PermContactCalendar /> &nbsp; Contact
             </Link>
           </li>
