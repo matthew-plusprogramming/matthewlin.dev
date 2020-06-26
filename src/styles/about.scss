@@ -58,14 +58,8 @@
   // Set default font weight lower
   font-weight: 300;
 
-  // For main text
-  bold {
-    font-weight: bold;
-  }
-  emphasize {
-    font-weight: 500;
-  }
-  p {
+  // Text styling
+  div {
     font-size: 2rem;
     @media #{$medium-and-down} {
       font-size: 1rem;
@@ -74,6 +68,26 @@
       font-size: 0.8rem;
     }
   }
+  color: var(--color-contrast);
+
+  // Collapsible
+  .collapsible,
+  .collapsible-header,
+  .collapsible-body {
+    background-color: var(--color-primary);
+    border-color: var(--color-contrast);
+    border-width: 0.1rem;
+    // border: none;
+  }
+
+  // For main text
+  bold {
+    font-weight: bold;
+  }
+  emphasize {
+    font-weight: 500;
+  }
+
   a {
     color: var(--color-contrast-light);
     text-decoration: underline;
