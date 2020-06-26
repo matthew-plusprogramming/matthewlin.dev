@@ -8,18 +8,27 @@ const NavigationContextProvider = (props) => {
   const testimonialsLinkRef = useRef(null);
   const contactLinkRef = useRef(null);
 
-  // Handles moving the underline when a link is clicked
+  // Handles updating page when navigation link clicked
   const updateNavLocation = (
     linkRef,
     instant = false,
     fullRedirect = false,
   ) => {
+    // Are we navigating to the page we're currently on?
+    let samePage = false;
+
     const boundingRect = linkRef.current.getBoundingClientRect();
 
     const width = boundingRect.width;
     const height = boundingRect.height;
     const left = boundingRect.left;
     const top = boundingRect.top;
+
+    if (
+      Math.trunc(left) ===
+      parseInt(underlineRef.current.style.left.slice(0, -2))
+    )
+      samePage = true;
 
     instant && (underlineRef.current.style.transition = 'none');
     underlineRef.current.style.width = `${width}px`;
@@ -33,7 +42,35 @@ const NavigationContextProvider = (props) => {
         10,
       );
 
-    if (fullRedirect) document.documentElement.scrollTop = 0;
+    if (fullRedirect) {
+      // Animate scroll to top if we're on the same page
+      if (samePage) {
+        const duration = 800;
+
+        // Cancel if already on top
+        if (document.scrollingElement.scrollTop === 0) return;
+
+        const cosParameter = document.scrollingElement.scrollTop / 2;
+        let scrollCount = 0,
+          oldTimestamp = null;
+
+        function step(newTimestamp) {
+          if (oldTimestamp !== null) {
+            // If duration is 0 scrollCount will be Infinity
+            scrollCount += (Math.PI * (newTimestamp - oldTimestamp)) / duration;
+            if (scrollCount >= Math.PI)
+              return (document.scrollingElement.scrollTop = 0);
+            document.scrollingElement.scrollTop =
+              cosParameter + cosParameter * Math.cos(scrollCount);
+          }
+          oldTimestamp = newTimestamp;
+          window.requestAnimationFrame(step);
+        }
+        window.requestAnimationFrame(step);
+      } else {
+        document.documentElement.scrollTop = 0;
+      }
+    }
   };
 
   return (
