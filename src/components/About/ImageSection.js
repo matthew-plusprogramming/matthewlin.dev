@@ -14,7 +14,7 @@ const ImageSection = (props) => {
         </div>
       </div>
       <div className="flex-row center image-section-description">
-        <p>{props.children}</p>
+        <div className="flex-1">{props.children}</div>
       </div>
     </div>
   );
