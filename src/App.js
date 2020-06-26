@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Switch, Route} from 'react-router-dom';
 
 // Style imports
@@ -15,11 +15,13 @@ import About from './About';
 import Header from './components/HeaderContainer';
 import Footer from './components/Footer';
 
-// On component did mount m init
-import M from 'materialize-css';
+// Context imports
+import {MaterializeCssContext} from './contexts/MaterializeCssContext';
 
 const App = () => {
-  setTimeout(() => M.AutoInit(), 100);
+  const materializeContext = useContext(MaterializeCssContext);
+  materializeContext.materializeReinit();
+
   return (
     <>
       <Header />
