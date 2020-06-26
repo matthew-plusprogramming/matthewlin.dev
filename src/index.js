@@ -5,14 +5,17 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import {NavigationContextProvider} from './contexts/NavigationContext';
+import {MaterializeCssContextProvider} from './contexts/MaterializeCssContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <NavigationContextProvider>
-      <Router>
-        <App />
-      </Router>
-    </NavigationContextProvider>
+    <MaterializeCssContextProvider>
+      <NavigationContextProvider>
+        <Router>
+          <App />
+        </Router>
+      </NavigationContextProvider>
+    </MaterializeCssContextProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
