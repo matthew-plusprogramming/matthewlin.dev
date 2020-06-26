@@ -19,7 +19,7 @@ import Footer from './components/Footer';
 import M from 'materialize-css';
 
 const App = () => {
-  M.AutoInit();
+  setTimeout(() => M.AutoInit(), 100);
   return (
     <>
       <Header />
