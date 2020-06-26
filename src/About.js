@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './styles/page.scss';
 import './styles/about.scss';
+
+import {MaterializeCssContext} from './contexts/MaterializeCssContext';
 
 import ImageSection from './components/About/ImageSection';
 
@@ -13,6 +15,9 @@ import first from './res/about/first.png';
 import music from './res/about/music.png';
 
 const About = () => {
+  const materializeContext = useContext(MaterializeCssContext);
+  materializeContext.materializeReinit();
+
   return (
     <>
       <main id="about">
