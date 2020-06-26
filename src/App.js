@@ -7,6 +7,7 @@ import './styles/animations.scss';
 import './styles/app.scss';
 
 // Page imports
+import PageNotFound from './PageNotFound';
 import Portfolio from './Portfolio';
 import About from './About';
 
@@ -34,6 +35,9 @@ const App = () => {
         </Route>
         <Route path="/contact">
           <div className="main-div"></div>
+        </Route>
+        <Route path="/">
+          <PageNotFound />
         </Route>
       </Switch>
       <Footer />
