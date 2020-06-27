@@ -14,6 +14,13 @@ const NavigationContextProvider = (props) => {
     instant = false,
     fullRedirect = false,
   ) => {
+    if (linkRef === null || typeof linkRef === 'undefined') {
+      // We are going to a page which isn't found
+      document.documentElement.scrollTop = 0;
+      underlineRef.current.style.width = '0';
+      return;
+    }
+
     // Are we navigating to the page we're currently on?
     let samePage = false;
 
