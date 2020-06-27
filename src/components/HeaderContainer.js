@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState, useCallback} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {useLocation} from 'react-router-dom';
 
 import HeaderComponent from './HeaderComponent';
@@ -35,49 +35,34 @@ const Header = () => {
     }
   }, [navContext]);
 
-  const updateNavLocation = useCallback(
-    (instant = true) => {
-      navContext.updateNavLocation(
-        (() => {
-          switch (location.pathname) {
-            case routes.portfolio:
-              return navContext.portfolioLinkRef;
-            case routes.about:
-              return navContext.aboutLinkRef;
-            case routes.testimonials:
-              return navContext.testimonialsLinkRef;
-            case routes.contact:
-              return navContext.contactLinkRef;
-            default:
-              return navContext.portfolioLinkRef;
-          }
-        })(),
-        instant,
-      );
-    },
-    [location.pathname, navContext],
-  );
-
   // When window resized
   useEffect(() => {
     // Handles window resizes
     const onResizeWindow = () => {
-      updateNavLocation();
+      navContext.updateNavLocation(location.pathname);
     };
 
     window.addEventListener('resize', onResizeWindow);
     return () => window.removeEventListener('resize', onResizeWindow);
-  }, [location, navContext, updateNavLocation]);
+  }, [location, navContext]);
 
   // When component mounts (runs only once)
   useEffect(() => {
     if (!mounted) {
-      updateNavLocation();
+      navContext.updateNavLocation(location.pathname, true);
       navContext.updateNavLocation(null, true, true);
-      setTimeout(() => updateNavLocation(false), 500);
+      setTimeout(
+        () => navContext.updateNavLocation(location.pathname, false),
+        500,
+      );
       setMounted(true);
     }
-  }, [updateNavLocation, navContext, mounted]);
+    const id = setInterval(
+      () => navContext.updateNavLocation(location.pathname, true),
+      1000,
+    );
+    return () => clearInterval(id);
+  }, [navContext, mounted, location.pathname]);
 
   return (
     <>

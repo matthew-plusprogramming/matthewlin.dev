@@ -1,4 +1,7 @@
 import React, {createContext, useRef} from 'react';
+
+import {routes} from '../components/constants';
+
 const NavigationContext = createContext();
 
 const NavigationContextProvider = (props) => {
@@ -9,17 +12,28 @@ const NavigationContextProvider = (props) => {
   const contactLinkRef = useRef(null);
 
   // Handles updating page when navigation link clicked
-  const updateNavLocation = (
-    linkRef,
-    instant = false,
-    fullRedirect = false,
-  ) => {
-    if (linkRef === null || typeof linkRef === 'undefined') {
+  const updateNavLocation = (route, instant = false, fullRedirect = false) => {
+    if (route === null || typeof route === 'undefined') {
       // We are going to a page which isn't found
       document.documentElement.scrollTop = 0;
       underlineRef.current.style.width = '0';
       return;
     }
+
+    let linkRef = (() => {
+      switch (route) {
+        case routes.portfolio:
+          return portfolioLinkRef;
+        case routes.about:
+          return aboutLinkRef;
+        case routes.testimonials:
+          return testimonialsLinkRef;
+        case routes.contact:
+          return contactLinkRef;
+        default:
+          return portfolioLinkRef;
+      }
+    })();
 
     // Are we navigating to the page we're currently on?
     let samePage = false;

@@ -9,13 +9,13 @@ import {MaterializeCssContextProvider} from './contexts/MaterializeCssContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MaterializeCssContextProvider>
-      <NavigationContextProvider>
-        <Router>
+    <Router>
+      <MaterializeCssContextProvider>
+        <NavigationContextProvider>
           <App />
-        </Router>
-      </NavigationContextProvider>
-    </MaterializeCssContextProvider>
+        </NavigationContextProvider>
+      </MaterializeCssContextProvider>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root'),
 );
