@@ -58,7 +58,7 @@ const Header = () => {
       setMounted(true);
     }
     const id = setInterval(
-      () => navContext.updateNavLocation(location.pathname, true),
+      () => navContext.updateNavLocation(location.pathname, false),
       1000,
     );
     return () => clearInterval(id);
