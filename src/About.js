@@ -38,7 +38,7 @@ const About = () => {
               title="My current (and future) schools"
               images={[mbhs, sdccd, berkeley]}>
               <span>
-                <ul className="collapsible">
+                <ul className="collapsible popout">
                   <li>
                     <div className="collapsible-header">
                       <bold is="custom">MBHS</bold>
@@ -87,7 +87,7 @@ const About = () => {
             </ImageSection>
             <ImageSection title="My groups" images={[cc, music, first]}>
               <span>
-                <ul className="collapsible">
+                <ul className="collapsible popout">
                   <li>
                     <div className="collapsible-header">
                       <bold is="custom">Cross Country/Track & Field</bold>
