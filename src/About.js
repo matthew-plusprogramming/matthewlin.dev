@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useRef, useEffect, useCallback} from 'react';
 import './styles/page.scss';
 import './styles/about.scss';
 
@@ -17,6 +17,48 @@ import music from './res/about/music.png';
 const About = () => {
   const materializeContext = useContext(MaterializeCssContext);
   materializeContext.materializeReinit();
+
+  const schoolsRef = useRef(null);
+  const groupsRef = useRef(null);
+
+  const hoverMenu = useCallback(
+    (menuRef) => {
+      if (menuRef.current) {
+        const openItem = (i) => {
+          console.log(menuRef.current);
+          let instance = materializeContext.M.Collapsible.getInstance(
+            menuRef.current,
+          );
+          console.log(instance);
+          setTimeout(() => instance.open(i), 100);
+        };
+        const closeItem = (i) => {
+          let instance = materializeContext.M.Collapsible.getInstance(
+            menuRef.current,
+          );
+          setTimeout(() => instance.close(i), 100);
+        };
+
+        for (let i = 0; i < menuRef.current.childNodes.length; ++i) {
+          menuRef.current.childNodes[i].onmouseover = () => {
+            console.log('hi');
+            openItem(i);
+          };
+          menuRef.current.childNodes[i].onmouseleave = () => {
+            closeItem(i);
+          };
+        }
+      }
+    },
+    [materializeContext.M],
+  );
+
+  useEffect(() => {
+    hoverMenu(schoolsRef);
+  }, [schoolsRef, hoverMenu]);
+  useEffect(() => {
+    hoverMenu(groupsRef);
+  }, [groupsRef, hoverMenu]);
 
   return (
     <>
@@ -38,7 +80,7 @@ const About = () => {
               title="My current (and future) schools"
               images={[mbhs, sdccd, berkeley]}>
               <span>
-                <ul className="collapsible popout">
+                <ul className="collapsible" ref={schoolsRef}>
                   <li>
                     <div className="collapsible-header">
                       <bold is="custom">MBHS</bold>
@@ -87,7 +129,7 @@ const About = () => {
             </ImageSection>
             <ImageSection title="My groups" images={[cc, music, first]}>
               <span>
-                <ul className="collapsible popout">
+                <ul className="collapsible" ref={groupsRef}>
                   <li>
                     <div className="collapsible-header">
                       <bold is="custom">Cross Country/Track & Field</bold>
