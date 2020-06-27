@@ -137,3 +137,10 @@
   position: absolute;
   bottom: 0;
 }
+
+// Buttons
+.button {
+  &:hover {
+    background-color: var(--color-selected-light);
+  }
+}

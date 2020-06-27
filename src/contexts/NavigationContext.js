@@ -1,4 +1,4 @@
-import React, {createContext, useRef, useState} from 'react';
+import React, {createContext, useRef} from 'react';
 
 import {routes} from '../components/constants';
 
