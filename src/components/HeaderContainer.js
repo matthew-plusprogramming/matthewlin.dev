@@ -35,25 +35,28 @@ const Header = () => {
     }
   }, [navContext]);
 
-  const updateNavLocation = useCallback(() => {
-    navContext.updateNavLocation(
-      (() => {
-        switch (location.pathname) {
-          case routes.portfolio:
-            return navContext.portfolioLinkRef;
-          case routes.about:
-            return navContext.aboutLinkRef;
-          case routes.testimonials:
-            return navContext.testimonialsLinkRef;
-          case routes.contact:
-            return navContext.contactLinkRef;
-          default:
-            return navContext.portfolioLinkRef;
-        }
-      })(),
-      true,
-    );
-  }, [location.pathname, navContext]);
+  const updateNavLocation = useCallback(
+    (instant = true) => {
+      navContext.updateNavLocation(
+        (() => {
+          switch (location.pathname) {
+            case routes.portfolio:
+              return navContext.portfolioLinkRef;
+            case routes.about:
+              return navContext.aboutLinkRef;
+            case routes.testimonials:
+              return navContext.testimonialsLinkRef;
+            case routes.contact:
+              return navContext.contactLinkRef;
+            default:
+              return navContext.portfolioLinkRef;
+          }
+        })(),
+        instant,
+      );
+    },
+    [location.pathname, navContext],
+  );
 
   // When window resized
   useEffect(() => {
@@ -70,9 +73,11 @@ const Header = () => {
   useEffect(() => {
     if (!mounted) {
       updateNavLocation();
+      navContext.updateNavLocation(null, true, true);
+      setTimeout(() => updateNavLocation(false), 500);
       setMounted(true);
     }
-  }, [updateNavLocation, mounted]);
+  }, [updateNavLocation, navContext, mounted]);
 
   return (
     <>

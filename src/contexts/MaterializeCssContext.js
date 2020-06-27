@@ -7,7 +7,13 @@ const MaterializeCssContext = createContext();
 
 const MaterializeCssContextProvider = (props) => {
   const materializeReinit = () => {
-    setTimeout(() => M.AutoInit(), 100);
+    setTimeout(() => {
+      M.AutoInit();
+      M.Collapsible.init(document.querySelectorAll('.collapsible'), {
+        inDuration: 400,
+        outDuration: 400,
+      });
+    }, 100);
   };
 
   return (
