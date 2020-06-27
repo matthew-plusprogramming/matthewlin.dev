@@ -14,6 +14,7 @@ const MaterializeCssContextProvider = (props) => {
     <MaterializeCssContext.Provider
       value={{
         materializeReinit: materializeReinit,
+        M: M,
       }}>
       {props.children}
     </MaterializeCssContext.Provider>
