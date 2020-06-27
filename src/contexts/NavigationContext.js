@@ -1,8 +1,11 @@
-import React, {createContext, useRef} from 'react';
+import React, {createContext, useRef, useState} from 'react';
 
 import {routes} from '../components/constants';
 
 const NavigationContext = createContext();
+
+// We set this once at runtime, and never change it
+let _topRuntimeConst = 0;
 
 const NavigationContextProvider = (props) => {
   const underlineRef = useRef(null);
@@ -43,7 +46,9 @@ const NavigationContextProvider = (props) => {
     const width = boundingRect.width;
     const height = boundingRect.height;
     const left = boundingRect.left;
-    const top = boundingRect.top;
+    if (_topRuntimeConst === 0) {
+      _topRuntimeConst = boundingRect.top;
+    }
 
     if (
       Math.trunc(left) ===
@@ -55,7 +60,7 @@ const NavigationContextProvider = (props) => {
     underlineRef.current.style.width = `${width}px`;
     underlineRef.current.style.height = `3px`;
     underlineRef.current.style.left = `${left}px`;
-    underlineRef.current.style.top = `${top + height - 10}px`;
+    underlineRef.current.style.top = `${_topRuntimeConst + height - 10}px`;
     underlineRef.current.style.transform = 'none';
     instant &&
       setTimeout(
