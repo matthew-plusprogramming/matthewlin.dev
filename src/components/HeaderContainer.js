@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState, useCallback} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {useLocation} from 'react-router-dom';
 
 import HeaderComponent from './HeaderComponent';
@@ -57,7 +57,12 @@ const Header = () => {
       );
       setMounted(true);
     }
-  }, [navContext, mounted]);
+    const id = setInterval(
+      () => navContext.updateNavLocation(location.pathname, true),
+      1000,
+    );
+    return () => clearInterval(id);
+  }, [navContext, mounted, location.pathname]);
 
   return (
     <>
