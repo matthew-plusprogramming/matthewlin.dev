@@ -120,12 +120,12 @@ const About = () => {
                       <bold is="custom">Berkeley</bold>
                     </div>
                     <div className="collapsible-body">
-                      Berkeley is my "dream school." I wish to attend Berkeley
-                      studying computer science. I love the school for many
-                      reasons including its amazing (and practical) computer
-                      science program, its location in my home state
-                      (California), and its proximity to Silicon Valley which
-                      may bring many opportunities for internships.
+                      Berkeley is my dream school! I wish to attend Berkeley
+                      studying computer science, and I love the school for many
+                      reasons including its reknown computer science program,
+                      its location in my home state (California), and its
+                      proximity to Silicon Valley which may bring many
+                      opportunities in the future!
                     </div>
                   </li>
                 </ul>
