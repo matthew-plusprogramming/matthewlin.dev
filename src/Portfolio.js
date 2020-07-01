@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/portfolio.scss';
+import './styles/tiles_sections.scss';
 
 import hero from './res/hero.png';
 import resume from './res/Matthew_Lin_Resume.pdf';
@@ -71,11 +72,11 @@ const Portfolio = () => {
             </p>
           </div>
         </div>
-        <div id="companies-section">
+        <div className="companies-section">
           <div className="flex-row center">
             <h4 className="large-bottom-margin">Companies I've Worked With</h4>
           </div>
-          <div id="company-tiles">
+          <div className="tiles">
             <HoverTile
               data={{
                 img: robolink,
@@ -97,13 +98,13 @@ const Portfolio = () => {
             </HoverTile>
           </div>
         </div>
-        <div id="projects-section">
+        <div className="projects-section">
           <div className="flex-row center">
             <h4 className="large-bottom-margin">
               Some Things I've Been Working On
             </h4>
           </div>
-          <div id="company-tiles" className="invert-tile-colors">
+          <div className="tiles invert-tile-colors">
             <HoverTile
               data={{
                 img: fastEngine,
