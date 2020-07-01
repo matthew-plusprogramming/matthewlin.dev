@@ -44,6 +44,7 @@ header {
       @media #{$small-and-down} {
         justify-content: space-between;
       }
+      align-items: center;
 
       li {
         // Center each nav item
