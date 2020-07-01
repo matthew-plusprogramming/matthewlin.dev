@@ -6,7 +6,9 @@ import './styles/tiles_sections.scss';
 import {MaterializeCssContext} from './contexts/MaterializeCssContext';
 
 import CompaniesTiles from './components/TileSections/CompaniesTiles';
+import ProjectsTiles from './components/TileSections/ProjectsTiles';
 import ImageSection from './components/About/ImageSection';
+import SkillsSection from './components/SkillsSection';
 
 import mbhs from './res/about/mbhs.jpg';
 import sdccd from './res/about/sdccd.png';
@@ -188,7 +190,9 @@ const About = () => {
             </ImageSection>
           </div>
         </div>
+        <SkillsSection />
         <CompaniesTiles />
+        <ProjectsTiles />
       </main>
     </>
   );
