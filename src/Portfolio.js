@@ -4,12 +4,9 @@ import './styles/tiles_sections.scss';
 
 import hero from './res/hero.png';
 import resume from './res/Matthew_Lin_Resume.pdf';
-import robolink from './res/robolink.png';
-import programination from './res/programination.png';
-import fastEngine from './res/projects/fast-engine.png';
-import simpleTodos from './res/projects/simpletodos.png';
 
-import HoverTile from './components/Portfolio/HoverTile';
+import CompaniesTiles from './components/TileSections/CompaniesTiles';
+import ProjectsTiles from './components/TileSections/ProjectsTiles';
 
 const Portfolio = () => {
   return (
@@ -72,60 +69,8 @@ const Portfolio = () => {
             </p>
           </div>
         </div>
-        <div className="companies-section">
-          <div className="flex-row center">
-            <h4 className="large-bottom-margin">Companies I've Worked With</h4>
-          </div>
-          <div className="tiles">
-            <HoverTile
-              data={{
-                img: robolink,
-                title: 'Robolink',
-                path: '/work-experience/robolink',
-              }}>
-              Teaching STEM to kids of all ages. Holds year around robotics
-              camps & produces educational STEM materials.
-            </HoverTile>
-
-            <HoverTile
-              data={{
-                img: programination,
-                title: 'Programination',
-                path: '/work-experience/programination',
-              }}>
-              Creating high quality web and mobile applications of all kinds for
-              clients.
-            </HoverTile>
-          </div>
-        </div>
-        <div className="projects-section">
-          <div className="flex-row center">
-            <h4 className="large-bottom-margin">
-              Some Things I've Been Working On
-            </h4>
-          </div>
-          <div className="tiles invert-tile-colors">
-            <HoverTile
-              data={{
-                img: fastEngine,
-                title: 'Fast Engine',
-                path: '/projects/fast-engine',
-              }}>
-              A simple game engine written in C++ using SDL for graphics
-              rendering
-            </HoverTile>
-
-            <HoverTile
-              data={{
-                img: simpleTodos,
-                title: 'Simple Todos',
-                path: '/projects/simpletodos',
-              }}>
-              A simple todo application written with the MERN stack (MongoDB,
-              ExpressJS, ReactNative, NodeJS)
-            </HoverTile>
-          </div>
-        </div>
+        <CompaniesTiles />
+        <ProjectsTiles />
       </main>
     </>
   );
