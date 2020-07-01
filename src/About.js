@@ -95,7 +95,7 @@ const About = () => {
                       doing (most listed to the right). I am a co-founder of the
                       Mission Bay High School Entrepreneurship Club and
                       academically, I currently hold a{' '}
-                      <emphasize is="custom">cumulative 4.84 GPA.</emphasize>
+                      <emphasize is="custom">cumulative 4.79 GPA.</emphasize>
                     </div>
                   </li>
                   <li>
@@ -111,7 +111,7 @@ const About = () => {
                       I currently hold a{' '}
                       <emphasize is="custom">4.0 GPA</emphasize> and have
                       completed/am in the process of completing{' '}
-                      <emphasize is="custom">34/60</emphasize> of my required
+                      <emphasize is="custom">20/60</emphasize> of my required
                       credits.
                     </div>
                   </li>
