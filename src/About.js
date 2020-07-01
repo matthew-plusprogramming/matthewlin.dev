@@ -8,8 +8,6 @@ import {MaterializeCssContext} from './contexts/MaterializeCssContext';
 import CompaniesTiles from './components/TileSections/CompaniesTiles';
 import ImageSection from './components/About/ImageSection';
 
-import robolink from './res/robolink.png';
-import programination from './res/programination.png';
 import mbhs from './res/about/mbhs.jpg';
 import sdccd from './res/about/sdccd.png';
 import matthew from './res/about/matthew.jpg';
