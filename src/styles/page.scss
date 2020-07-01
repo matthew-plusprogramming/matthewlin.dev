@@ -1,12 +1,12 @@
 .main-div {
   .page-title {
-    animation: fadeInUp 1.2s both;
-    -webkit-animation: fadeInUp 1.2s both;
+    animation: fadeInUp 0.8s both;
+    -webkit-animation: fadeInUp 0.8s both;
   }
 }
 
 .fade-in-after-page-title-load {
   animation: fadeIn 0.8s both;
   -webkit-animation: fadeIn 0.8s both;
-  animation-delay: 1.2s;
+  animation-delay: 0.8s;
 }
