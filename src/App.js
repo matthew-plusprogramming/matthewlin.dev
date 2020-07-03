@@ -1,28 +1,33 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Switch, Route} from 'react-router-dom';
 
 // Style imports
 import './materialize.scss';
+import './styles/animations.scss';
 import './styles/app.scss';
 
 // Page imports
+import PageNotFound from './PageNotFound';
 import Portfolio from './Portfolio';
+import About from './About';
 
 // Component imports
 import Header from './components/HeaderContainer';
 import Footer from './components/Footer';
 
-// On component did mount m init
-import M from 'materialize-css';
+// Context imports
+import {MaterializeCssContext} from './contexts/MaterializeCssContext';
 
 const App = () => {
-  M.AutoInit();
+  const materializeContext = useContext(MaterializeCssContext);
+  materializeContext.materializeReinit();
+
   return (
     <>
       <Header />
       <Switch>
         <Route path="/about">
-          <div className="main-div"></div>
+          <About />
         </Route>
         <Route exact path="/">
           <Portfolio />
@@ -32,6 +37,9 @@ const App = () => {
         </Route>
         <Route path="/contact">
           <div className="main-div"></div>
+        </Route>
+        <Route path="/">
+          <PageNotFound />
         </Route>
       </Switch>
       <Footer />

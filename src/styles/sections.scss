@@ -1,0 +1,184 @@
+@import '../materialize';
+
+.companies-section {
+  padding: 8rem 0;
+  background-color: var(--color-accent);
+
+  // Make it so that tiles display on different lines on small screens
+  @media #{$small-and-down} {
+    > div {
+      flex-direction: column;
+    }
+  }
+}
+.projects-section {
+  padding: 8rem 0;
+  background-color: var(--color-primary);
+}
+.skills-section {
+  padding: 8rem 0;
+  color: var(--color-contrast);
+  background-color: var(--color-primary);
+
+  // Set default font weight lower
+  font-weight: 300;
+
+  // Text styling
+  div {
+    font-size: 1.2rem;
+    @media #{$medium-and-down} {
+      font-size: 1rem;
+    }
+    @media #{$small-and-down} {
+      font-size: 0.8rem;
+    }
+  }
+
+  img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  // For main text
+  bold {
+    font-weight: bold;
+  }
+  emphasize {
+    font-weight: 500;
+  }
+
+  // Collapsible
+  .collapsible,
+  .collapsible-header,
+  .collapsible-body {
+    padding: 0;
+    border: none;
+
+    background-color: var(--color-primary);
+    border-color: var(--color-contrast);
+  }
+
+  .collapsible-header {
+    padding: 1rem 0 0.5rem;
+    align-items: center;
+  }
+  .collapsible-body {
+    padding: 0 0 0.5rem;
+  }
+}
+.skills-wrapper {
+  // Wrapping for our skills collapsibles
+  flex-wrap: wrap;
+  padding: 0 1rem;
+
+  // Collapsible configuration
+  .collapsible {
+    width: 30rem;
+    margin: 1rem 2rem;
+    h4 {
+      text-align: center;
+    }
+  }
+  .collapsible-header {
+    display: flex;
+    justify-content: center;
+    h5 {
+      margin: 0;
+    }
+  }
+  .collapsible-body {
+    width: 100%;
+    text-align: left;
+  }
+}
+.tiles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @media #{$small-and-down} {
+    flex-direction: column;
+  }
+  justify-content: center;
+  align-items: center;
+}
+
+// Tile configuration
+.hover-tile {
+  // Sizing
+  width: 30rem;
+  height: 30rem;
+  @media #{$medium-and-down} {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  margin: 1rem 2rem;
+  padding: 2rem 2rem;
+  @media #{$small-and-down} {
+    margin: 2rem 0;
+    padding: 1rem 1rem;
+  }
+
+  // Flex settings
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--color-accent);
+
+  img {
+    animation: fadeIn ease 0.35s;
+    -webkit-animation: fadeIn ease 0.35s;
+    width: 100%;
+    height: 100%;
+  }
+  p,
+  a {
+    display: none;
+    text-align: center;
+  }
+  a {
+    color: var(--color-primary);
+  }
+
+  &:hover {
+    // Hide image and show content on hover
+    img {
+      display: none;
+    }
+    p,
+    a {
+      animation: fadeIn ease 0.35s;
+      -webkit-animation: fadeIn ease 0.35s;
+      display: block;
+    }
+  }
+}
+.invert-tile-colors {
+  .hover-tile {
+    background-color: var(--color-contrast);
+    p {
+      color: var(--color-accent);
+    }
+  }
+}
+// Components of tile
+.tile-title {
+  font-size: 2.2rem;
+  @media #{$small-and-down} {
+    font-size: 2rem;
+  }
+}
+.tile-main {
+  font-size: 1.4rem;
+  @media #{$small-and-down} {
+    font-size: 1.2rem;
+  }
+}
+.tile-footer {
+  font-size: 1.6rem;
+  @media #{$small-and-down} {
+    font-size: 1.5rem;
+  }
+}

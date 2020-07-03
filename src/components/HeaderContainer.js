@@ -1,5 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {useLocation} from 'react-router-dom';
+
 import HeaderComponent from './HeaderComponent';
 import Sidenav from './Sidenav';
 
@@ -12,6 +13,7 @@ import {routes} from './constants';
 const Header = () => {
   const [sidenavShowing, setSidenavShowing] = useState(false);
   const [atTop, setAtTop] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   const navContext = useContext(NavigationContext);
 
@@ -32,32 +34,35 @@ const Header = () => {
       navContext.updateNavLocation(navContext.portfolioLinkRef, true);
     }
   }, [navContext]);
-  // On component did mount
+
+  // When window resized
   useEffect(() => {
     // Handles window resizes
     const onResizeWindow = () => {
-      navContext.updateNavLocation(
-        (() => {
-          switch (location.pathname) {
-            case '/':
-              return navContext.portfolioLinkRef;
-            case '/about':
-              return navContext.aboutLinkRef;
-            case '/testimonials':
-              return navContext.testimonialsLinkRef;
-            case '/contact':
-              return navContext.contactLinkRef;
-            default:
-              return navContext.portfolioLinkRef;
-          }
-        })(),
-        true,
-      );
+      navContext.updateNavLocation(location.pathname);
     };
 
     window.addEventListener('resize', onResizeWindow);
     return () => window.removeEventListener('resize', onResizeWindow);
   }, [location, navContext]);
+
+  // When component mounts (runs only once)
+  useEffect(() => {
+    if (!mounted) {
+      navContext.updateNavLocation(location.pathname, true);
+      navContext.updateNavLocation(null, true, true);
+      setTimeout(
+        () => navContext.updateNavLocation(location.pathname, false),
+        500,
+      );
+      setMounted(true);
+    }
+    const id = setInterval(
+      () => navContext.updateNavLocation(location.pathname, false),
+      100,
+    );
+    return () => clearInterval(id);
+  }, [navContext, mounted, location.pathname]);
 
   return (
     <>

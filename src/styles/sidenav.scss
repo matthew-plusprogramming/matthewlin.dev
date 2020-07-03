@@ -10,25 +10,9 @@
   z-index: 1000;
 
   // Background color and transition
-  background-color: rgba(10, 10, 10, 0.8);
+  background-color: var(--color-darken-background);
   animation: fadeIn ease 0.35s;
   -webkit-animation: fadeIn ease 0.35s;
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 
   // Main sidenav
   #sidenav {
@@ -43,16 +27,6 @@
     -webkit-transform: translateX(-100%);
     animation: slide-in 0.5s forwards;
     -webkit-animation: slide-in 0.5s forwards;
-    @keyframes slide-in {
-      100% {
-        transform: translateX(0%);
-      }
-    }
-    @-webkit-keyframes slide-in {
-      100% {
-        -webkit-transform: translateX(0%);
-      }
-    }
 
     // Item styles
     ul {
@@ -83,4 +57,9 @@
       }
     }
   }
+}
+
+// Selected sidenav items
+.sidenav-selected {
+  background-color: var(--color-selected);
 }

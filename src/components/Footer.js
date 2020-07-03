@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 
 import {NavigationContext} from '../contexts/NavigationContext';
 
@@ -9,6 +9,8 @@ import {routes} from './constants';
 
 const Footer = () => {
   const navContext = useContext(NavigationContext);
+
+  const location = useLocation();
 
   return (
     <footer>
@@ -31,11 +33,12 @@ const Footer = () => {
                 <Link
                   to={routes.about}
                   onClick={() =>
-                    navContext.updateNavLocation(
-                      navContext.aboutLinkRef,
-                      false,
-                      true,
-                    )
+                    navContext.updateNavLocation(routes.about, false, true)
+                  }
+                  className={
+                    location.pathname === routes.about
+                      ? 'footer-selected'
+                      : undefined
                   }>
                   About
                 </Link>
@@ -44,11 +47,12 @@ const Footer = () => {
                 <Link
                   to={routes.portfolio}
                   onClick={() =>
-                    navContext.updateNavLocation(
-                      navContext.portfolioLinkRef,
-                      false,
-                      true,
-                    )
+                    navContext.updateNavLocation(routes.portfolio, false, true)
+                  }
+                  className={
+                    location.pathname === routes.portfolio
+                      ? 'footer-selected'
+                      : undefined
                   }>
                   Portfolio
                 </Link>
@@ -58,10 +62,15 @@ const Footer = () => {
                   to={routes.testimonials}
                   onClick={() =>
                     navContext.updateNavLocation(
-                      navContext.testimonialsLinkRef,
+                      routes.testimonials,
                       false,
                       true,
                     )
+                  }
+                  className={
+                    location.pathname === routes.testimonials
+                      ? 'footer-selected'
+                      : undefined
                   }>
                   Testimonials
                 </Link>
@@ -70,11 +79,12 @@ const Footer = () => {
                 <Link
                   to={routes.contact}
                   onClick={() =>
-                    navContext.updateNavLocation(
-                      navContext.contactLinkRef,
-                      false,
-                      true,
-                    )
+                    navContext.updateNavLocation(routes.contact, false, true)
+                  }
+                  className={
+                    location.pathname === routes.contact
+                      ? 'footer-selected'
+                      : undefined
                   }>
                   Contact
                 </Link>
