@@ -7,6 +7,7 @@ import resume from './res/Matthew_Lin_Resume.pdf';
 
 import CompaniesTiles from './components/TileSections/CompaniesTiles';
 import ProjectsTiles from './components/TileSections/ProjectsTiles';
+import SkillsSection from './components/SkillsSection';
 
 const Portfolio = () => {
   return (
@@ -69,6 +70,7 @@ const Portfolio = () => {
             </p>
           </div>
         </div>
+        <SkillsSection />
         <CompaniesTiles />
         <ProjectsTiles />
       </main>
