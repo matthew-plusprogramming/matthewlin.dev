@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/portfolio.scss';
-import './styles/tiles_sections.scss';
+import './styles/sections.scss';
 
 import hero from './res/hero.png';
 import resume from './res/Matthew_Lin_Resume.pdf';

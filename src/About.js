@@ -1,7 +1,7 @@
 import React, {useContext, useRef, useEffect, useCallback} from 'react';
 import './styles/page.scss';
 import './styles/about.scss';
-import './styles/tiles_sections.scss';
+import './styles/sections.scss';
 
 import {MaterializeCssContext} from './contexts/MaterializeCssContext';
 
