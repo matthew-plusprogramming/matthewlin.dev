@@ -13,6 +13,9 @@ const MaterializeCssContextProvider = (props) => {
         inDuration: 400,
         outDuration: 400,
       });
+      M.Collapsible.init(document.querySelectorAll('.collapsible.expandable'), {
+        accordion: false,
+      });
     }, 100);
   };
 
