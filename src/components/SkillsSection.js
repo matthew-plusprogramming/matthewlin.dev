@@ -22,7 +22,7 @@ const SkillsSection = () => {
           <li>
             <div className="collapsible-header">
               <h5>HTML/CSS</h5>
-              <img src={ThreeArrow} />
+              <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
               <strong is="custom">Years of Experience: 1.5</strong>
@@ -33,7 +33,7 @@ const SkillsSection = () => {
           <li>
             <div className="collapsible-header">
               <h5>ReactJS</h5>
-              <img src={ThreeArrow} />
+              <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
               <strong is="custom">Years of Experience: 0.5</strong>
@@ -47,7 +47,7 @@ const SkillsSection = () => {
           <li>
             <div className="collapsible-header">
               <h5>React Native</h5>
-              <img src={ThreeArrow} />
+              <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
               <strong is="custom">Years of Experience: 0.5</strong>
@@ -60,7 +60,7 @@ const SkillsSection = () => {
           <li>
             <div className="collapsible-header">
               <h5>Flutter</h5>
-              <img src={OneArrow} />
+              <img src={OneArrow} alt="" />
             </div>
             <div className="collapsible-body">
               <strong is="custom">Years of Experience: 0.5</strong>
@@ -75,7 +75,7 @@ const SkillsSection = () => {
           <li>
             <div className="collapsible-header">
               <h5>JavaScript (NodeJS)</h5>
-              <img src={ThreeArrow} />
+              <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
               <strong is="custom">Years of Experience: 1.5</strong>
@@ -91,7 +91,7 @@ const SkillsSection = () => {
           <li>
             <div className="collapsible-header">
               <h5>ExpressJS</h5>
-              <img src={ThreeArrow} />
+              <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
               <strong is="custom">Years of Experience: 1.0</strong>
@@ -104,7 +104,7 @@ const SkillsSection = () => {
           <li>
             <div className="collapsible-header">
               <h5>MongoDB</h5>
-              <img src={TwoArrow} />
+              <img src={TwoArrow} alt="" />
             </div>
             <div className="collapsible-body">
               <strong is="custom">Years of Experience: 0.5</strong>
@@ -115,7 +115,7 @@ const SkillsSection = () => {
           <li>
             <div className="collapsible-header">
               <h5>Postgres</h5>
-              <img src={TwoArrow} />
+              <img src={TwoArrow} alt="" />
             </div>
             <div className="collapsible-body">
               <strong is="custom">Years of Experience: 0.5</strong>
@@ -129,7 +129,7 @@ const SkillsSection = () => {
           <li>
             <div className="collapsible-header">
               <h5>C/C++</h5>
-              <img src={ThreeArrow} />
+              <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
               <strong is="custom">Years of Experience: 4.0</strong>
@@ -145,7 +145,7 @@ const SkillsSection = () => {
           <li>
             <div className="collapsible-header">
               <h5>Git (GitHub & GitLab)</h5>
-              <img src={ThreeArrow} />
+              <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
               <strong is="custom">Years of Experience: 2.0</strong>
@@ -158,7 +158,7 @@ const SkillsSection = () => {
           <li>
             <div className="collapsible-header">
               <h5>Python</h5>
-              <img src={TwoArrow} />
+              <img src={TwoArrow} alt="" />
             </div>
             <div className="collapsible-body">
               <strong is="custom">Years of Experience: 2.0</strong>
@@ -174,7 +174,7 @@ const SkillsSection = () => {
           <li>
             <div className="collapsible-header">
               <h5>GraphQL</h5>
-              <img src={TwoArrow} />
+              <img src={TwoArrow} alt="" />
             </div>
             <div className="collapsible-body">
               <strong is="custom">Years of Experience: 0.5</strong>
@@ -187,7 +187,7 @@ const SkillsSection = () => {
           <li>
             <div className="collapsible-header">
               <h5>Containerization (Docker)</h5>
-              <img src={OneArrow} />
+              <img src={OneArrow} alt="" />
             </div>
             <div className="collapsible-body">
               <strong is="custom">Years of Experience: 1.5</strong>
