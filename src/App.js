@@ -9,6 +9,7 @@ import './styles/app.scss';
 // Page imports
 import PageNotFound from './PageNotFound';
 import Portfolio from './Portfolio';
+import About from './About';
 
 // Component imports
 import Header from './components/HeaderContainer';
@@ -26,7 +27,7 @@ const App = () => {
       <Header />
       <Switch>
         <Route path="/about">
-          <div className="main-div"></div>
+          <About />
         </Route>
         <Route exact path="/">
           <Portfolio />
