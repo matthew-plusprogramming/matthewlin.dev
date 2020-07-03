@@ -69,6 +69,17 @@ p {
   display: flex;
   flex-direction: column;
 }
+.flex-container {
+  // Set inner padding
+  width: 100%;
+  padding: 0 3rem;
+  @media #{$medium-and-down} {
+    padding: 0 2rem;
+  }
+  @media #{$medium-and-down} {
+    padding: 0 1rem;
+  }
+}
 .flex-1 {
   flex: 1;
 }
