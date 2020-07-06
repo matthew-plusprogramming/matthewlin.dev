@@ -18,7 +18,9 @@ const SkillsSection = () => {
       </div>
       <div className="flex-row center skills-wrapper">
         <ul className="collapsible expandable z-depth-0">
-          <h4>Front-end Developer</h4>
+          <li>
+            <h4>Front-end Developer</h4>
+          </li>
           <li>
             <div className="collapsible-header">
               <h5>HTML/CSS</h5>
@@ -71,7 +73,9 @@ const SkillsSection = () => {
           </li>
         </ul>
         <ul className="collapsible expandable z-depth-0">
-          <h4>Back-end Developer</h4>
+          <li>
+            <h4>Back-end Developer</h4>
+          </li>
           <li>
             <div className="collapsible-header">
               <h5>JavaScript (NodeJS)</h5>
@@ -125,7 +129,9 @@ const SkillsSection = () => {
           </li>
         </ul>
         <ul className="collapsible expandable z-depth-0">
-          <h4>Capable Developer</h4>
+          <li>
+            <h4>Capable Developer</h4>
+          </li>
           <li>
             <div className="collapsible-header">
               <h5>C/C++</h5>

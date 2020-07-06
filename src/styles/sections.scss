@@ -108,6 +108,10 @@
   width: 30rem;
   height: 30rem;
   @media #{$medium-and-down} {
+    width: 22rem;
+    height: 22rem;
+  }
+  @media #{$small-and-down} {
     width: 18rem;
     height: 18rem;
   }
