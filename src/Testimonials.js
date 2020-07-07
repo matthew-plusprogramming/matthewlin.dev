@@ -5,6 +5,8 @@ import './styles/testimonials.scss';
 import TestimonialCard from './components/Testimonials/TestimonialCard';
 
 import personPlaceholder from './res/testimonials/person-placeholder.jpg';
+import ashelyDuren from './res/testimonials/ashley-duren.jpg';
+import raymondMitchell from './res/testimonials/raymond-mitchell.jpg';
 
 const About = () => {
   return (
@@ -25,7 +27,7 @@ const About = () => {
             id="testimonial-cards"
             className="flex-col fade-in-after-page-title-load">
             <TestimonialCard
-              img={personPlaceholder}
+              img={raymondMitchell}
               name="Raymond Mitchell"
               employment={[
                 'Professor',
@@ -47,7 +49,7 @@ const About = () => {
               date="02/07/2019"
             />
             <TestimonialCard
-              img={personPlaceholder}
+              img={ashelyDuren}
               name="Ashley Duren"
               employment={[
                 'Vice Principal',
