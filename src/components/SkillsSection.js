@@ -4,7 +4,13 @@ import ThreeArrow from '../res/three-arrow.png';
 import TwoArrow from '../res/two-arrow.png';
 import OneArrow from '../res/one-arrow.png';
 
+// Context imports
+import {MaterializeCssContext} from './contexts/MaterializeCssContext';
+
 const SkillsSection = () => {
+  const materializeContext = useContext(MaterializeCssContext);
+  materializeContext.materializeReinit();
+
   return (
     <div className="skills-section">
       <div className="flex-row center">
