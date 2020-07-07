@@ -1,11 +1,5 @@
 @import '../materialize';
 
-#about {
-  .main-div {
-    padding: 2rem 0;
-  }
-}
-
 #about-picture {
   // Padding
   padding: 0 15rem;
@@ -21,6 +15,8 @@
   justify-content: center;
 
   img {
+    border-radius: 1rem;
+
     margin: 0 0.5rem;
     width: 16rem;
     height: 16rem;
@@ -105,6 +101,8 @@
   justify-content: center;
 
   img {
+    border-radius: 1rem;
+
     width: 13rem;
     height: 13rem;
     @media #{$medium-and-down} {
