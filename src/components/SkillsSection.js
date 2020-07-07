@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import ThreeArrow from '../res/three-arrow.png';
 import TwoArrow from '../res/two-arrow.png';
 import OneArrow from '../res/one-arrow.png';
 
 // Context imports
-import {MaterializeCssContext} from './contexts/MaterializeCssContext';
+import {MaterializeCssContext} from '../contexts/MaterializeCssContext';
 
 const SkillsSection = () => {
   const materializeContext = useContext(MaterializeCssContext);
