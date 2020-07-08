@@ -1,0 +1,52 @@
+@import '../materialize';
+
+form > div {
+  // Padding and margin
+  padding: 1rem;
+  margin: 1rem 0;
+
+  // Card sizing
+  width: 50rem;
+  min-height: 20rem;
+  @media #{$medium-and-down} {
+    width: 80vw;
+  }
+  @media #{$small-and-down} {
+    width: 90vw;
+  }
+
+  // Card styling
+  background-color: var(--color-contrast);
+  border-radius: 1rem;
+
+  // Color for the star
+  sup {
+    color: var(--color-primary-dark);
+  }
+
+  // Input field
+  .input-field {
+    margin: 1rem;
+  }
+
+  // Submit button
+  button {
+    // Sizing and styling
+    width: 20rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border-width: 0;
+
+    // Coloring
+    background-color: var(--color-primary);
+
+    // Inner text
+    color: var(--color-contrast);
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  h6 {
+    color: var(--color-accent);
+  }
+}
