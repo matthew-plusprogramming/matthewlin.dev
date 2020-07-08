@@ -3,6 +3,10 @@
 #portfolio {
   .main-div {
     padding: 5rem 0;
+
+    @media screen and (max-height: 40rem) {
+      height: 150vh;
+    }
   }
 }
 #landing-page {
