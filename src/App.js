@@ -11,6 +11,7 @@ import PageNotFound from './PageNotFound';
 import Portfolio from './Portfolio';
 import About from './About';
 import Testimonials from './Testimonials';
+import Contact from './Contact';
 
 // Component imports
 import Header from './components/HeaderContainer';
@@ -37,7 +38,7 @@ const App = () => {
           <Testimonials />
         </Route>
         <Route path="/contact">
-          <div className="main-div"></div>
+          <Contact></Contact>
         </Route>
         <Route path="/">
           <PageNotFound />

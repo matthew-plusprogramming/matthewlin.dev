@@ -106,6 +106,22 @@ const Footer = () => {
               </h6>
               <h6>
                 <a
+                  href="https://linkedin.com/in/matthewlin-sd"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  LinkedIn
+                </a>
+              </h6>
+              <h6>
+                <a
+                  href="https://www.youtube.com/channel/UCqVIqm9pT-4lH8v2UzkfxIA/"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  YouTube
+                </a>
+              </h6>
+              <h6>
+                <a
                   href="https://instagram.com/matthew.plusprogramming"
                   target="_blank"
                   rel="noopener noreferrer">
@@ -114,10 +130,10 @@ const Footer = () => {
               </h6>
               <h6>
                 <a
-                  href="https://linkedin.com/in/matthewlin-sd"
+                  href="https://twitter.com/mat_thewlin"
                   target="_blank"
                   rel="noopener noreferrer">
-                  LinkedIn
+                  Twitter
                 </a>
               </h6>
             </div>
