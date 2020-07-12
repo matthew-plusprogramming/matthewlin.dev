@@ -49,6 +49,15 @@ const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="flex-col">
+        <div className="flex-row center">
+          <h4 className="no-margin">Contact Form</h4>
+        </div>
+        <div className="flex-row center bottom-margin">
+          <h6>
+            <i>I will reply to any inquiries as soon as possible.</i>
+          </h6>
+        </div>
+
         <div className="flex-row">
           <div className="input-field flex-1">
             <input

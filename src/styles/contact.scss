@@ -1,4 +1,5 @@
 @import '../materialize';
+@import './variables.scss';
 
 form > div {
   // Padding and margin
@@ -46,7 +47,36 @@ form > div {
     font-weight: 500;
   }
 
+  h4,
   h6 {
     color: var(--color-accent);
+  }
+}
+
+#contact-section {
+  // Wrap on smaller screens
+  flex-wrap: wrap;
+  justify-content: center;
+
+  #contact-text {
+    margin: 1rem 0 0;
+    h5 {
+      margin: 0 0 2rem 2rem;
+      a {
+        color: var(--color-contrst);
+        text-decoration: underline;
+        margin: 0 0 0 1rem;
+      }
+    }
+    @media #{$medium-and-down} {
+      h5 {
+        margin: 0 0 2rem 0;
+      }
+    }
+    @media #{$extra-small-and-down} {
+      h5 {
+        font-size: 0.8rem !important;
+      }
+    }
   }
 }
