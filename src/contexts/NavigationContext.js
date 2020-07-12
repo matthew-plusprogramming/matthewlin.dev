@@ -34,9 +34,14 @@ const NavigationContextProvider = (props) => {
         case routes.contact:
           return contactLinkRef;
         default:
-          return portfolioLinkRef;
+          // This page is not known so there should be no nav underline
+          document.documentElement.scrollTop = 0;
+          underlineRef.current.style.width = '0';
+          return null;
       }
     })();
+
+    if (linkRef === null) return;
 
     // Are we navigating to the page we're currently on?
     let samePage = false;
