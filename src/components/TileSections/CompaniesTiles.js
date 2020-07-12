@@ -7,7 +7,7 @@ import programination from '../../res/programination.png';
 
 const CompaniesTiles = () => (
   <div className="companies-section">
-    <div className="flex-row center">
+    <div className="flex-row flex-container center">
       <h4 className="large-bottom-margin">Companies I've Worked With</h4>
     </div>
     <div className="tiles">
