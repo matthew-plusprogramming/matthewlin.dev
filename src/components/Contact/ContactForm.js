@@ -47,7 +47,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="large-bottom-margin">
       <div className="flex-col">
         <div className="flex-row center">
           <h4 className="no-margin">Contact Form</h4>
