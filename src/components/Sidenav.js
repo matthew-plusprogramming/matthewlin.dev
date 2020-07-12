@@ -1,13 +1,16 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useContext} from 'react';
 import {Link, useLocation} from 'react-router-dom';
-
 import '../styles/sidenav.scss';
+
+import {NavigationContext} from '../contexts/NavigationContext';
 
 // Icon imports
 import {PermContactCalendar, Info, Description, Chat} from '@material-ui/icons';
 
 const Sidenav = (props) => {
   const sidenavRef = useRef(null);
+
+  const navContext = useContext(NavigationContext);
 
   const location = useLocation();
 
@@ -41,7 +44,10 @@ const Sidenav = (props) => {
           <li>
             <Link
               to={routes.about}
-              onClick={() => setSidenavShowing(false)}
+              onClick={() => {
+                setSidenavShowing(false);
+                navContext.updateNavLocation(routes.about, false, true);
+              }}
               className={
                 'waves-effect waves-dark ' +
                 (location.pathname === routes.about ? 'sidenav-selected' : '')
@@ -52,7 +58,10 @@ const Sidenav = (props) => {
           <li>
             <Link
               to={routes.portfolio}
-              onClick={() => setSidenavShowing(false)}
+              onClick={() => {
+                setSidenavShowing(false);
+                navContext.updateNavLocation(routes.portfolio, false, true);
+              }}
               className={
                 'waves-effect waves-dark ' +
                 (location.pathname === routes.portfolio
@@ -65,7 +74,10 @@ const Sidenav = (props) => {
           <li>
             <Link
               to={routes.testimonials}
-              onClick={() => setSidenavShowing(false)}
+              onClick={() => {
+                setSidenavShowing(false);
+                navContext.updateNavLocation(routes.testimonials, false, true);
+              }}
               className={
                 'waves-effect waves-dark ' +
                 (location.pathname === routes.testimonials
@@ -78,7 +90,10 @@ const Sidenav = (props) => {
           <li>
             <Link
               to={routes.contact}
-              onClick={() => setSidenavShowing(false)}
+              onClick={() => {
+                setSidenavShowing(false);
+                navContext.updateNavLocation(routes.contact, false, true);
+              }}
               className={
                 'waves-effect waves-dark ' +
                 (location.pathname === routes.contact ? 'sidenav-selected' : '')
