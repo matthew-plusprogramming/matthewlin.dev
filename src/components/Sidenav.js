@@ -46,7 +46,12 @@ const Sidenav = (props) => {
               to={routes.about}
               onClick={() => {
                 setSidenavShowing(false);
-                navContext.updateNavLocation(routes.about, false, true);
+                navContext.updateNavLocation(
+                  routes.about,
+                  false,
+                  true,
+                  location.pathname,
+                );
               }}
               className={
                 'waves-effect waves-dark ' +
@@ -60,7 +65,12 @@ const Sidenav = (props) => {
               to={routes.portfolio}
               onClick={() => {
                 setSidenavShowing(false);
-                navContext.updateNavLocation(routes.portfolio, false, true);
+                navContext.updateNavLocation(
+                  routes.portfolio,
+                  false,
+                  true,
+                  location.pathname,
+                );
               }}
               className={
                 'waves-effect waves-dark ' +
@@ -76,7 +86,12 @@ const Sidenav = (props) => {
               to={routes.testimonials}
               onClick={() => {
                 setSidenavShowing(false);
-                navContext.updateNavLocation(routes.testimonials, false, true);
+                navContext.updateNavLocation(
+                  routes.testimonials,
+                  false,
+                  true,
+                  location.pathname,
+                );
               }}
               className={
                 'waves-effect waves-dark ' +
@@ -92,7 +107,12 @@ const Sidenav = (props) => {
               to={routes.contact}
               onClick={() => {
                 setSidenavShowing(false);
-                navContext.updateNavLocation(routes.contact, false, true);
+                navContext.updateNavLocation(
+                  routes.contact,
+                  false,
+                  true,
+                  location.pathname,
+                );
               }}
               className={
                 'waves-effect waves-dark ' +
