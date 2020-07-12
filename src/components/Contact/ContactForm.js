@@ -32,7 +32,7 @@ const ContactForm = () => {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(formData),
     }).then((res) => {
-      if (res.status != 200) {
+      if (res.status !== 200) {
         setStatusText(
           'The information you gave me is incomplete! Please make sure all required information is provided.',
         );
