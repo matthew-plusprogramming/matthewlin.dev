@@ -28,11 +28,10 @@
   }
 
   // Subsection styles
-  .tcard-header {
+  .wxpjcard-header {
     img {
       // Sizing & styling
       object-fit: cover;
-      border-radius: 50%;
       height: 5rem;
       width: 5rem;
     }
@@ -47,12 +46,21 @@
     }
     height: 5rem;
   }
-  .tcard-body {
-    // Padding and margin
-    padding: 1.5rem 0 0;
+  .wxpjcard-body {
+    ul {
+      font-size: 1.5rem;
+      @media #{$small-and-down} {
+        font-size: 1.2rem;
+      }
+
+      text-align: left;
+    }
   }
-  .tcard-body,
-  .tcard-footer {
+  .wxpjcard-footer {
+    padding: 0.5rem 0 0;
+  }
+  .wxpjcard-body,
+  .wxpjcard-footer {
     p {
       font-size: 1.4rem;
     }
