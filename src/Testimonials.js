@@ -7,6 +7,7 @@ import TestimonialCard from './components/Testimonials/TestimonialCard';
 import personPlaceholder from './res/testimonials/person-placeholder.jpg';
 import ashelyDuren from './res/testimonials/ashley-duren.jpg';
 import raymondMitchell from './res/testimonials/raymond-mitchell.jpg';
+import edisonJimenez from './res/testimonials/edison-jimenez.jpg';
 
 const About = () => {
   return (
@@ -26,6 +27,21 @@ const About = () => {
           <div
             id="testimonial-cards"
             className="flex-col fade-in-after-page-title-load">
+            <TestimonialCard
+              img={edisonJimenez}
+              name="Edison Jimenez"
+              employment={[
+                'CEO',
+                'Programination',
+                'https://programination.com',
+              ]}
+              text="Matthew is a great example of what it means to be a
+              self-starter. No matter what projects we threw at him, Matthew
+              always took the initiative to go above and beyond project
+              requirements. I highly recommend Matthew's services to anyone
+              looking to hire him."
+              date="07/13/2020"
+            />
             <TestimonialCard
               img={raymondMitchell}
               name="Raymond Mitchell"
