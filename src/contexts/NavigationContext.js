@@ -65,7 +65,7 @@ const NavigationContextProvider = (props) => {
       parseInt(underlineRef.current.style.left.slice(0, -2))
     )
       samePage = true;
-    if (prevRoute != route) {
+    if (prevRoute !== route) {
       samePage = false;
     }
 
