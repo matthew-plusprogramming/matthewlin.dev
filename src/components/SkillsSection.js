@@ -13,7 +13,7 @@ const SkillsSection = () => {
 
   return (
     <div className="skills-section">
-      <div className="flex-row center">
+      <div className="flex-row flex-container center">
         <h4 className="bottom-margin">True Full Stack Developer</h4>
       </div>
       <div className="flex-row flex-container center">

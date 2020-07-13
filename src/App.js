@@ -16,6 +16,7 @@ import Contact from './Contact';
 // Component imports
 import Header from './components/HeaderContainer';
 import Footer from './components/Footer';
+import WorkExperienceOrProjectPage from './components/WorkExperienceOrProjectPage';
 
 // Context imports
 import {MaterializeCssContext} from './contexts/MaterializeCssContext';
@@ -38,7 +39,10 @@ const App = () => {
           <Testimonials />
         </Route>
         <Route path="/contact">
-          <Contact></Contact>
+          <Contact />
+        </Route>
+        <Route path={['/work-experience', '/projects']}>
+          <WorkExperienceOrProjectPage />
         </Route>
         <Route path="/">
           <PageNotFound />
