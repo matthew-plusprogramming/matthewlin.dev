@@ -77,6 +77,7 @@ const Header = () => {
           atTop: atTop,
           updateNavLocation: navContext.updateNavLocation,
           setSidenavShowing: setSidenavShowing,
+          prevRoute: location.pathname,
         }}
       />
       <Sidenav

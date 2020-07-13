@@ -15,7 +15,12 @@ const NavigationContextProvider = (props) => {
   const contactLinkRef = useRef(null);
 
   // Handles updating page when navigation link clicked
-  const updateNavLocation = (route, instant = false, fullRedirect = false) => {
+  const updateNavLocation = (
+    route,
+    instant = false,
+    fullRedirect = false,
+    prevRoute = '',
+  ) => {
     if (route === null || typeof route === 'undefined') {
       // We are going to a page which isn't found
       document.documentElement.scrollTop = 0;
@@ -34,9 +39,11 @@ const NavigationContextProvider = (props) => {
         case routes.contact:
           return contactLinkRef;
         default:
-          return portfolioLinkRef;
+          return null;
       }
     })();
+
+    if (linkRef === null) return;
 
     // Are we navigating to the page we're currently on?
     let samePage = false;
@@ -55,6 +62,9 @@ const NavigationContextProvider = (props) => {
       parseInt(underlineRef.current.style.left.slice(0, -2))
     )
       samePage = true;
+    if (prevRoute !== route) {
+      samePage = false;
+    }
 
     instant && (underlineRef.current.style.transition = 'none');
     underlineRef.current.style.width = `${width}px`;

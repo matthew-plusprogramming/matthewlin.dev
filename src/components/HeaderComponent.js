@@ -15,6 +15,7 @@ const HeaderComponent = (props) => {
     atTop,
     updateNavLocation,
     setSidenavShowing,
+    prevRoute,
   } = props.data;
 
   return (
@@ -30,7 +31,9 @@ const HeaderComponent = (props) => {
           <li id="brand-logo">
             <Link
               to={routes.portfolio}
-              onClick={() => updateNavLocation(routes.portfolio, false, true)}>
+              onClick={() =>
+                updateNavLocation(routes.portfolio, false, true, prevRoute)
+              }>
               Matthew Lin
             </Link>
           </li>
