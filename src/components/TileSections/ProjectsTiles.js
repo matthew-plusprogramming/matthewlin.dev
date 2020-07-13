@@ -7,7 +7,7 @@ import simpleTodos from '../../res/projects/simpletodos.png';
 
 const ProjectsTiles = () => (
   <div className="projects-section">
-    <div className="flex-row center">
+    <div className="flex-row flex-container center">
       <h4 className="large-bottom-margin">Some Things I've Been Working On</h4>
     </div>
     <div className="tiles invert-tile-colors">

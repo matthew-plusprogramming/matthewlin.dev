@@ -33,7 +33,12 @@ const Footer = () => {
                 <Link
                   to={routes.about}
                   onClick={() =>
-                    navContext.updateNavLocation(routes.about, false, true)
+                    navContext.updateNavLocation(
+                      routes.about,
+                      false,
+                      true,
+                      location.pathname,
+                    )
                   }
                   className={
                     location.pathname === routes.about
@@ -47,7 +52,12 @@ const Footer = () => {
                 <Link
                   to={routes.portfolio}
                   onClick={() =>
-                    navContext.updateNavLocation(routes.portfolio, false, true)
+                    navContext.updateNavLocation(
+                      routes.portfolio,
+                      false,
+                      true,
+                      location.pathname,
+                    )
                   }
                   className={
                     location.pathname === routes.portfolio
@@ -65,6 +75,7 @@ const Footer = () => {
                       routes.testimonials,
                       false,
                       true,
+                      location.pathname,
                     )
                   }
                   className={
@@ -79,7 +90,12 @@ const Footer = () => {
                 <Link
                   to={routes.contact}
                   onClick={() =>
-                    navContext.updateNavLocation(routes.contact, false, true)
+                    navContext.updateNavLocation(
+                      routes.contact,
+                      false,
+                      true,
+                      location.pathname,
+                    )
                   }
                   className={
                     location.pathname === routes.contact
