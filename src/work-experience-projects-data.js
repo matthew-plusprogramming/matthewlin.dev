@@ -17,6 +17,7 @@ const data = {
       time:
         'Creating high quality web and mobile applications of all kinds for clients --- June 2020 - August 2020 (3 Months)',
       notes: [
+        'Led a small team in creating a new product for the company',
         "Utilized React Native to assist in the development of mobile apps for the company's clients",
         "Utilized Postgres, GraphQL, ExpressJS, and React Native to develop a full-stack MVP for one of the company's products in development",
         'Gained experience developing apps with React Native & Flutter',
