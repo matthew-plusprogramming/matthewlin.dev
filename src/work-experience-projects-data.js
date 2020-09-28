@@ -15,11 +15,11 @@ const data = {
       image: require('./res/programination.png'),
       title: 'Programination',
       time:
-        'Creating high quality web and mobile applications of all kinds for clients --- June 2020 - August 2020 (3 Months)',
+        'Creating high quality web and mobile applications of all kinds for clients --- June 2020 - Present',
       notes: [
-        'Led a small team in creating a new product for the company',
-        "Utilized React Native to assist in the development of mobile apps for the company's clients",
-        "Utilized Postgres, GraphQL, ExpressJS, and React Native to develop a full-stack MVP for one of the company's products in development",
+        'Led the development of a prototype product for the company used by organizations for internal event planning & coordination',
+        'Utilized Postgres, GraphQL, and React Native to develop the product mentioned above',
+        "Utilized React Native to assist in the development of several products for various company clients",
         'Gained experience developing apps with React Native & Flutter',
       ],
       links: ['Company Website', 'https://programination.com'],
