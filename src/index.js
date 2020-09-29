@@ -20,4 +20,7 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 
-serviceWorker.register();
+// We likely want to keep this unregistered due to the purpose of this site
+serviceWorker.unregister();
+
+// serviceWorker.register();
