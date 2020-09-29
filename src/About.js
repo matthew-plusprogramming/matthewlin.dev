@@ -95,7 +95,7 @@ const About = () => {
                       doing (most listed to the right). I am a co-founder of the
                       Mission Bay High School Entrepreneurship Club and
                       academically, I currently hold a{' '}
-                      <emphasize is="custom">cumulative 4.79 GPA.</emphasize>
+                      <emphasize is="custom">cumulative 4.77 GPA.</emphasize>
                     </div>
                   </li>
                   <li>
