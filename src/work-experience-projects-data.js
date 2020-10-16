@@ -18,7 +18,7 @@ const data = {
     },
     programination: {
       image: require('./res/programination.png'),
-      title: 'Programination - SWE (Former intern)',
+      title: 'Programination - Part Time SWE (Former intern)',
       time:
         'Creating high quality web and mobile applications of all kinds for clients --- June 2020 - Present',
       sections: [
