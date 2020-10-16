@@ -3,7 +3,7 @@ import React from 'react';
 import HoverTile from './HoverTile';
 
 import fastEngine from '../../res/projects/fast-engine.png';
-import simpleTodos from '../../res/projects/simpletodos.png';
+import matthewlinDev from '../../res/projects/matthewlin-dev.png';
 
 const ProjectsTiles = () => (
   <div className="projects-section">
@@ -16,18 +16,19 @@ const ProjectsTiles = () => (
           img: fastEngine,
           title: 'Fast Engine',
           path: '/projects/fast-engine',
-        }}>
+        }}
+      >
         A simple game engine written in C++ using SDL for graphics rendering
       </HoverTile>
 
       <HoverTile
         data={{
-          img: simpleTodos,
-          title: 'Simple Todos',
-          path: '/projects/simpletodos',
-        }}>
-        A simple todo application written with the MERN stack (MongoDB,
-        ExpressJS, ReactNative, NodeJS)
+          img: matthewlinDev,
+          title: 'matthewlin.dev (this site)',
+          path: '/projects/matthewlin-dev',
+        }}
+      >
+        This website created with ReactJS, ExpressJS, and NodeJS
       </HoverTile>
     </div>
   </div>
