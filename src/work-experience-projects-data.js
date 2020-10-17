@@ -9,8 +9,8 @@ const data = {
         {
           title: 'Responsibilities:',
           notes: [
-            'Instructed classes pertaining to STEM education utilizing Python & C++',
-            'Developed documentation for STEM learning materials using Python, HTML, and Markdown',
+            'Instructed classes pertaining to STEM education utilizing Python & C++.',
+            'Developed documentation for STEM learning materials using Python, HTML, and Markdown.',
           ],
         },
       ],
@@ -39,7 +39,7 @@ const data = {
         {
           title: 'Backend:',
           notes: [
-            'Utilized NodeJS as back end developer for company clients'
+            'Utilized NodeJS as back end developer for company clients.'
             'Implemented reverse proxy server to handle ghost blog & general backend tasks related to the company\'s website.'
           ],
         },
@@ -56,8 +56,8 @@ const data = {
         {
           title: 'Details:',
           notes: [
-            'Created with C++/SDL',
-            "Created for my personal, and others' use to create games easily in C++",
+            'Created with C++/SDL.',
+            "Created for my personal, and others' use to create games easily in C++.",
           ],
         },
       ],
@@ -74,9 +74,9 @@ const data = {
         {
           title: 'Details:',
           notes: [
-            'I started creating this site while I was learning react',
-            'Frontend written in ReactJS',
-            'Backend written in NodeJS & ExpressJS',
+            'I started creating this site while I was learning react.',
+            'Frontend written in ReactJS.',
+            'Backend written in NodeJS & ExpressJS.',
           ],
         },
       ],
