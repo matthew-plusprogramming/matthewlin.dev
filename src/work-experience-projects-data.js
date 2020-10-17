@@ -25,20 +25,23 @@ const data = {
         {
           title: 'General:',
           notes: [
-            'Note: Some of the specifics of the projects I worked on are covered by NDA, so please reach out for any specifics',
-            'Led the development of a prototype product for the company used by organizations for internal event planning & coordination',
-            '^ Utilized Postgres, GraphQL, ExpressJS, and React Native',
+            'Technologies: NodeJS, ReactJS, React Native, ExpressJS, GraphQL, Postgres.',
+            'Worked on development teams for various company internal projects, and client projects.',
           ],
         },
         {
           title: 'Frontend:',
           notes: [
-            'Utilized React Native on development team for several company clients',
+            'Utilized React Native on development team for several company clients.',
+            'Implemented ghost blog functionality natively into the company\'s website.'
           ],
         },
         {
           title: 'Backend:',
-          notes: ['Utilized NodeJS as back end developer for company clients'],
+          notes: [
+            'Utilized NodeJS as back end developer for company clients'
+            'Implemented reverse proxy server to handle ghost blog & general backend tasks related to the company\'s website.'
+          ],
         },
       ],
       links: ['Company Website', 'https://programination.com'],
