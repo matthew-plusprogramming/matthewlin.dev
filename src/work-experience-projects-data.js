@@ -33,14 +33,14 @@ const data = {
           title: 'Frontend:',
           notes: [
             'Utilized React Native on development team for several company clients.',
-            'Implemented ghost blog functionality natively into the company\'s website.'
+            'Implemented ghost blog functionality natively into the company\'s website.',
           ],
         },
         {
           title: 'Backend:',
           notes: [
-            'Utilized NodeJS as back end developer for company clients.'
-            'Implemented reverse proxy server to handle ghost blog & general backend tasks related to the company\'s website.'
+            'Utilized NodeJS as back end developer for company clients.',
+            'Implemented reverse proxy server to handle ghost blog & general backend tasks related to the company\'s website.',
           ],
         },
       ],
