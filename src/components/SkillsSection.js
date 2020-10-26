@@ -33,7 +33,7 @@ const SkillsSection = () => {
               <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: 1.5</strong>
+              <strong is="custom">Years of Experience: ~2</strong>
               <br />I have worked extensively with HTML and CSS both on personal
               and professional projects.
             </div>
@@ -44,12 +44,15 @@ const SkillsSection = () => {
               <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: 0.5</strong>
-              <br />I learned React originally due to the fact that it was a
-              requirement for on of my summer software engineering internships.
-              In the process of learning the framework I recreated my portfolio
-              website (this website) and worked on various outward facing
-              projects for the internship using it.
+              <strong is="custom">Years of Experience: ~0.5</strong>
+              <br />I use and have used ReactJS in a variety of projects both
+              personal and professional. For example, as a SWE at{' '}
+              <a href="/work-experience/programination" className="white-link">
+                Programination
+              </a>
+              , I've used React and React Native to work on many company
+              projects both internal and for clients. In addition, this
+              portfolio site is written in React.
             </div>
           </li>
           <li>
@@ -58,11 +61,14 @@ const SkillsSection = () => {
               <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: 0.5</strong>
-              <br />I learned React Native as a requirement for one of my summer
-              software engineering internships. In the process of learning the
-              framework I worked on several outward facing projects for the
-              internship.
+              <strong is="custom">Years of Experience: ~0.5</strong>
+              <br />
+              As listed in the above React section, I've used React Native for
+              various internal and client projects at{' '}
+              <a href="/work-experience/programination" className="white-link">
+                Programination
+              </a>
+              .
             </div>
           </li>
           <li>
@@ -71,7 +77,7 @@ const SkillsSection = () => {
               <img src={OneArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: 0.5</strong>
+              <strong is="custom">Years of Experience: ~0.5</strong>
               <br />I learned Flutter as a requirement for one of my summer
               software engineering internships. In the process of learning the
               framework I worked on a small learning project for the internship.
@@ -88,7 +94,7 @@ const SkillsSection = () => {
               <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: 1.5</strong>
+              <strong is="custom">Years of Experience: ~2</strong>
               <br />I have worked extensively with NodeJS both on personal and
               professional projects. I have experience implementing several
               different types of backends including REST APIs and GraphQL APIs.
@@ -104,7 +110,7 @@ const SkillsSection = () => {
               <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: 1.0</strong>
+              <strong is="custom">Years of Experience: ~1.0</strong>
               <br />I have created many webservers using the ExpressJS library
               for both personal and professional projects. I have implemented
               REST and GraphQL backends using express in conjunction with
@@ -117,7 +123,7 @@ const SkillsSection = () => {
               <img src={TwoArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: 0.5</strong>
+              <strong is="custom">Years of Experience: ~0.5</strong>
               <br />I use MongoDB as my database of choice as my preferred tech
               stack is the MERN stack (Mongo, Express, React, NodeJs).
             </div>
@@ -128,15 +134,32 @@ const SkillsSection = () => {
               <img src={TwoArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: 0.5</strong>
-              <br />I have used Postgres alongside GraphQL in ony of my summer
-              software engineering internships.
+              <strong is="custom">Years of Experience: ~0.5</strong>
+              <br />I have used Postgres alongside GraphQL in various internal
+              and client projects at{' '}
+              <a href="/work-experience/programination" className="white-link">
+                Programination
+              </a>
+              .
+            </div>
+          </li>
+          <li>
+            <div className="collapsible-header">
+              <h5>GoLang</h5>
+              <img src={OneArrow} alt="" />
+            </div>
+            <div className="collapsible-body">
+              <strong is="custom">Years of Experience: ~0.5</strong>
+              <br />
+              I've recently started learning Go out of personal interest. I find
+              it a fairly intuitive language and intend to use it for some
+              future projects in lieu of NodeJS and/or C++.
             </div>
           </li>
         </ul>
         <ul className="collapsible expandable z-depth-0">
           <li>
-            <h4>Capable Developer</h4>
+            <h4>Everything Developer</h4>
           </li>
           <li>
             <div className="collapsible-header">
@@ -144,7 +167,7 @@ const SkillsSection = () => {
               <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: 4.0</strong>
+              <strong is="custom">Years of Experience: ~4.5</strong>
               <br />C and C++ were two of the first programming languages I
               learned, and I definitely have benefitted greatly from this
               choice. Through programming with these languages I have learned to
@@ -160,7 +183,7 @@ const SkillsSection = () => {
               <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: 2.0</strong>
+              <strong is="custom">Years of Experience: ~2.5</strong>
               <br />I have been using Git for the last few years in order to
               manage my personal projects. In addition to this, I got to learn
               how to use Git in a professional/large team environment during one
@@ -173,14 +196,14 @@ const SkillsSection = () => {
               <img src={TwoArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: 2.0</strong>
+              <strong is="custom">Years of Experience: ~2.5</strong>
               <br />
-              My experience with Python is fairly limited. I have used python in
-              my STEM summer camp instruction internship for machine learning
-              applications. In addition to this, I have a limited amount of
-              experience creating chatbots for clients on Fiverr using python,
-              however I switched to JavaScript at some point which is now my
-              language of choice for most applications.
+              My professional experience with Python is fairly limited. I have
+              used python in my STEM summer camp instruction internship for
+              machine learning applications. In addition to this, I have a
+              limited amount of experience creating chatbots for clients on
+              Fiverr using python, however I switched to JavaScript at some
+              point which is now my language of choice for most applications.
             </div>
           </li>
           <li>
@@ -189,11 +212,14 @@ const SkillsSection = () => {
               <img src={TwoArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: 0.5</strong>
-              <br />I have used GraphQL alongside Postgres in ony of my summer
-              software engineering internships. By using GraphQL, I was able to
-              create a scalable and adaptable API to enable flexible data
-              fetching and manipulation.
+              <strong is="custom">Years of Experience: ~0.5</strong>
+              <br />I have used GraphQL alongside Postgres in several projects
+              at{' '}
+              <a href="/work-experience/programination" className="white-link">
+                Programination
+              </a>
+              . By using GraphQL, I was able to create a scalable and adaptable
+              API to enable flexible data fetching and manipulation.
             </div>
           </li>
           <li>
@@ -202,7 +228,7 @@ const SkillsSection = () => {
               <img src={OneArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: 1.5</strong>
+              <strong is="custom">Years of Experience: ~1.5</strong>
               <br />I have utilized containerization and more specifically
               Docker in order to create an isolated code execution environment
               for one of my personal projects.
