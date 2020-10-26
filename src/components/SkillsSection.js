@@ -1,11 +1,11 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 
 import ThreeArrow from '../res/three-arrow.png';
 import TwoArrow from '../res/two-arrow.png';
 import OneArrow from '../res/one-arrow.png';
 
 // Context imports
-import {MaterializeCssContext} from '../contexts/MaterializeCssContext';
+import { MaterializeCssContext } from '../contexts/MaterializeCssContext';
 
 const SkillsSection = () => {
   const materializeContext = useContext(MaterializeCssContext);
@@ -18,8 +18,8 @@ const SkillsSection = () => {
       </div>
       <div className="flex-row flex-container center">
         <h5 className="large-bottom-margin">
-          I have spent 4 years and counting exploring the computer science world
-          and have specialized in a few key areas!
+          I have spent ~4.5 years exploring, learning, and creating as much as I
+          can in the software engineering world. Here are some of my skills!
         </h5>
       </div>
       <div className="flex-row center skills-wrapper">
