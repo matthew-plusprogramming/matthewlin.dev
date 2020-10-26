@@ -73,6 +73,20 @@ const SkillsSection = () => {
           </li>
           <li>
             <div className="collapsible-header">
+              <h5>Svelte</h5>
+              <img src={OneArrow} alt="" />
+            </div>
+            <div className="collapsible-body">
+              <strong is="custom">Years of Experience: ~0.5</strong>
+              <br />
+              I've recently started learning Svelte out of personal interest. I
+              enjoy its syntactic similarity to and the performance and size
+              improvements over React. I am planning to use it for smaller
+              personal projects in the near future!
+            </div>
+          </li>
+          <li>
+            <div className="collapsible-header">
               <h5>Flutter</h5>
               <img src={OneArrow} alt="" />
             </div>
