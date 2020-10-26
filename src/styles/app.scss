@@ -72,11 +72,11 @@ p {
 .flex-container {
   // Set inner padding
   width: 100%;
-  padding: 0 3rem;
+  padding: 0 10%;
   @media #{$medium-and-down} {
     padding: 0 2rem;
   }
-  @media #{$medium-and-down} {
+  @media #{$small-and-down} {
     padding: 0 1rem;
   }
 }
