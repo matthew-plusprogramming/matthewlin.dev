@@ -24,19 +24,31 @@ const Portfolio = () => {
               I create high quality web/desktop/mobile apps and more!
             </h5>
           </div>
-          <div className="flex-row center">
+          <div className="flex-row center bottom-margin">
             <a
               href="https://github.com/matthew-plusprogramming"
               target="_blank"
               rel="noopener noreferrer"
-              className="button waves-effect waves-light z-depth-1 fixed-width-button">
+              className="button waves-effect waves-light z-depth-1 fixed-width-button"
+            >
               View Github
             </a>
+            <a
+              href={'https://linkedin.com/in/matthewlin-sd'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button waves-effect waves-light z-depth-1 fixed-width-button"
+            >
+              View LinkedIn
+            </a>
+          </div>
+          <div className="flex-row center">
             <a
               href={resume}
               target="_blank"
               rel="noopener noreferrer"
-              className="button waves-effect waves-light z-depth-1 fixed-width-button">
+              className="button waves-effect waves-light z-depth-1 fixed-width-button"
+            >
               View Resume
             </a>
           </div>
