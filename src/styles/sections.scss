@@ -51,15 +51,18 @@
   .collapsible,
   .collapsible-header,
   .collapsible-body {
-    padding: 0;
-    border: none;
-
     background-color: var(--color-primary);
     border-color: var(--color-contrast);
   }
 
+  .collapsible {
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    height: 100%;
+  }
   .collapsible-header {
     padding: 1rem 0 0.5rem;
+    border-top: 1px solid;
     align-items: center;
   }
   .collapsible-body {
@@ -69,12 +72,15 @@
 .skills-wrapper {
   // Wrapping for our skills collapsibles
   flex-wrap: wrap;
-  padding: 0 1rem;
+  padding: 0 2%;
 
   // Collapsible configuration
   .collapsible {
-    width: 30rem;
-    margin: 1rem 2rem;
+    width: 30%;
+    @media #{$medium-and-down} {
+      width: 30rem;
+    }
+    margin: 1rem 1%;
     h4 {
       text-align: center;
     }
