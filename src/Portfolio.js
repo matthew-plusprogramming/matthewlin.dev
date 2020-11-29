@@ -16,7 +16,7 @@ const Portfolio = () => {
         <div id="landing-page" className="main-div">
           <div className="flex-row center">
             <h3 className="no-margin medium-text">
-              Full Stack Software Developer
+              Full Stack Software Developer & Content Creator
             </h3>
           </div>
           <div className="flex-row center bottom-margin">
@@ -50,6 +50,14 @@ const Portfolio = () => {
               className="button waves-effect waves-light z-depth-1 fixed-width-button"
             >
               View Resume
+            </a>
+            <a
+              href={'https://www.youtube.com/channel/UCqVIqm9pT-4lH8v2UzkfxIA'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button waves-effect waves-light z-depth-1 fixed-width-button"
+            >
+              YouTube
             </a>
           </div>
 
