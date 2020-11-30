@@ -57,7 +57,7 @@ const Portfolio = () => {
               rel="noopener noreferrer"
               className="button waves-effect waves-light z-depth-1 fixed-width-button"
             >
-              YouTube
+              View YouTube
             </a>
           </div>
 
