@@ -157,7 +157,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex-row">
-        <h6 className="light-text">Copyright &copy; 2019 - 2020 Matthew Lin</h6>
+        <h6 className="light-text">Copyright &copy; 2019 - 2021 Matthew Lin</h6>
       </div>
     </footer>
   );
