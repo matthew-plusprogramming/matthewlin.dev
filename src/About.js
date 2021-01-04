@@ -111,7 +111,7 @@ const About = () => {
                       I currently hold a{' '}
                       <emphasize is="custom">4.0 GPA</emphasize> and have
                       completed/am in the process of completing{' '}
-                      <emphasize is="custom">34/60</emphasize> of my required
+                      <emphasize is="custom">51/60</emphasize> of my required
                       credits.
                     </div>
                   </li>
