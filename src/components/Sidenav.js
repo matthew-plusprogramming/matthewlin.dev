@@ -1,11 +1,16 @@
-import React, {useEffect, useRef, useContext} from 'react';
-import {Link, useLocation} from 'react-router-dom';
+import React, { useEffect, useRef, useContext } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/sidenav.scss';
 
-import {NavigationContext} from '../contexts/NavigationContext';
+import { NavigationContext } from '../contexts/NavigationContext';
 
 // Icon imports
-import {PermContactCalendar, Info, Description, Chat} from '@material-ui/icons';
+import {
+  PermContactCalendar,
+  Info,
+  Description,
+  Chat,
+} from '@material-ui/icons';
 
 const Sidenav = (props) => {
   const sidenavRef = useRef(null);
@@ -14,7 +19,7 @@ const Sidenav = (props) => {
 
   const location = useLocation();
 
-  const {routes, sidenavShowing, setSidenavShowing} = props.data;
+  const { routes, sidenavShowing, setSidenavShowing } = props.data;
 
   useEffect(() => {
     // Hide sidenav if outside click is detected
@@ -39,7 +44,8 @@ const Sidenav = (props) => {
       <div
         id="sidenav"
         ref={sidenavRef}
-        className={sidenavShowing ? undefined : 'hide'}>
+        className={sidenavShowing ? undefined : 'hide'}
+      >
         <ul>
           <li>
             <Link
@@ -53,10 +59,10 @@ const Sidenav = (props) => {
                   location.pathname,
                 );
               }}
-              className={
-                'waves-effect waves-dark ' +
-                (location.pathname === routes.about ? 'sidenav-selected' : '')
-              }>
+              className={`waves-effect waves-dark ${
+                location.pathname === routes.about && 'sidenav-selected'
+              }`}
+            >
               <Info /> &nbsp; About
             </Link>
           </li>
@@ -77,7 +83,8 @@ const Sidenav = (props) => {
                 (location.pathname === routes.portfolio
                   ? 'sidenav-selected'
                   : '')
-              }>
+              }
+            >
               <Description /> &nbsp; Portfolio
             </Link>
           </li>
@@ -98,7 +105,8 @@ const Sidenav = (props) => {
                 (location.pathname === routes.testimonials
                   ? 'sidenav-selected'
                   : '')
-              }>
+              }
+            >
               <Chat /> &nbsp; Testimonials
             </Link>
           </li>
@@ -117,7 +125,8 @@ const Sidenav = (props) => {
               className={
                 'waves-effect waves-dark ' +
                 (location.pathname === routes.contact ? 'sidenav-selected' : '')
-              }>
+              }
+            >
               <PermContactCalendar /> &nbsp; Contact
             </Link>
           </li>
