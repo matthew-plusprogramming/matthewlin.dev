@@ -25,6 +25,14 @@ form > div {
     color: var(--color-primary-dark);
   }
 
+  // Dark mode styling
+  &.dark-mode {
+    background-color: var(--color-accent);
+    sup {
+      color: var(--color-contrast);
+    }
+  }
+
   // Input field
   .input-field {
     margin: 1rem;
@@ -45,11 +53,22 @@ form > div {
     color: var(--color-contrast);
     font-size: 1.5rem;
     font-weight: 500;
+
+    &:focus {
+      background-color: var(--color-primary);
+    }
   }
 
   h4,
   h6 {
     color: var(--color-accent);
+  }
+  &.dark-mode {
+    h4,
+    h6 {
+      color: var(--color-contrast);
+    }
+    color: var(--color-contrast);
   }
 }
 

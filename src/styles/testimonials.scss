@@ -8,6 +8,15 @@
   // Flex options
   justify-content: flex-start;
   align-items: center;
+
+  &.dark-mode > .testimonial-card {
+    background-color: var(--color-accent);
+    h5,
+    h6,
+    p {
+      color: var(--color-contrast);
+    }
+  }
 }
 
 .testimonial-card {

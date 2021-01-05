@@ -1,9 +1,11 @@
-import React, {useContext, useState} from 'react';
+import React, { useContext, useState } from 'react';
 
-import {MaterializeCssContext} from '../../contexts/MaterializeCssContext';
+import { MaterializeCssContext } from '../../contexts/MaterializeCssContext';
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const ContactForm = () => {
   const materializeContext = useContext(MaterializeCssContext);
+  const themeContext = useContext(ThemeContext);
   materializeContext.materializeReinit();
 
   const defaultFormData = {
@@ -20,8 +22,8 @@ const ContactForm = () => {
 
   // Handle form events
   const handleChange = (event) => {
-    const {id, value} = event.target;
-    setFormData({...formData, [id]: value});
+    const { id, value } = event.target;
+    setFormData({ ...formData, [id]: value });
   };
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -29,7 +31,7 @@ const ContactForm = () => {
     fetch('https://services.matthewlin.dev/portfolio-api/contact', {
       method: 'POST',
       mode: 'cors',
-      headers: {'Content-Type': 'application/json'},
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
     }).then((res) => {
       if (res.status !== 200) {
@@ -48,7 +50,7 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="large-bottom-margin">
-      <div className="flex-col">
+      <div className={`flex-col ${themeContext.darkMode && 'dark-mode'}`}>
         <div className="flex-row center">
           <h4 className="no-margin">Contact Form</h4>
         </div>

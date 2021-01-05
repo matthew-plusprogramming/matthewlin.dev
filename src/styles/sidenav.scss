@@ -23,6 +23,9 @@
     height: 100%;
     z-index: 1001;
     background-color: var(--color-contrast);
+    &.dark-mode {
+      background-color: var(--color-accent);
+    }
     transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
     animation: slide-in 0.5s forwards;
@@ -53,6 +56,15 @@
           padding: 0 2rem;
 
           color: black;
+        }
+      }
+    }
+    &.dark-mode {
+      ul {
+        li {
+          a {
+            color: var(--color-contrast);
+          }
         }
       }
     }

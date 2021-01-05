@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import '../styles/sidenav.scss';
 
 import { NavigationContext } from '../contexts/NavigationContext';
+import { ThemeContext } from '../contexts/ThemeContext';
 
 // Icon imports
 import {
@@ -16,6 +17,7 @@ const Sidenav = (props) => {
   const sidenavRef = useRef(null);
 
   const navContext = useContext(NavigationContext);
+  const themeContext = useContext(ThemeContext);
 
   const location = useLocation();
 
@@ -40,11 +42,13 @@ const Sidenav = (props) => {
   }, [setSidenavShowing]);
 
   return (
-    <div id="sidenavWrapper" className={sidenavShowing ? undefined : 'hide'}>
+    <div id="sidenavWrapper" className={!sidenavShowing && 'hide'}>
       <div
         id="sidenav"
         ref={sidenavRef}
-        className={sidenavShowing ? undefined : 'hide'}
+        className={`${!sidenavShowing && 'hide'} ${
+          themeContext.darkMode && 'dark-mode'
+        }`}
       >
         <ul>
           <li>

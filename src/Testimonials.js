@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './styles/page.scss';
 import './styles/testimonials.scss';
 
@@ -9,7 +9,11 @@ import ashelyDuren from './res/testimonials/ashley-duren.jpg';
 import raymondMitchell from './res/testimonials/raymond-mitchell.jpg';
 import edisonJimenez from './res/testimonials/edison-jimenez.jpg';
 
-const About = () => {
+import { ThemeContext } from './contexts/ThemeContext';
+
+const Testimonials = () => {
+  const themeContext = useContext(ThemeContext);
+
   return (
     <>
       <main id="testimonials">
@@ -26,7 +30,10 @@ const About = () => {
 
           <div
             id="testimonial-cards"
-            className="flex-col fade-in-after-page-title-load">
+            className={`flex-col fade-in-after-page-title-load ${
+              themeContext.darkMode && 'dark-mode'
+            }`}
+          >
             <TestimonialCard
               img={edisonJimenez}
               name="Edison Jimenez"
@@ -107,4 +114,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Testimonials;
