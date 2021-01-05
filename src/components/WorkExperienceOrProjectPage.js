@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../styles/wkexp-proj-page.scss';
 import { useLocation } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 
 import data from '../work-experience-projects-data';
 
+import { ThemeContext } from '../contexts/ThemeContext';
+
 const WorkExperienceOrProjectPage = () => {
   const location = useLocation();
   const paths = location.pathname.split('/');
   const { image, title, time, sections, links } = data[paths[1]][paths[2]];
+
+  const themeContext = useContext(ThemeContext);
 
   const notesDisplay = sections.map((section) => {
     const notes = section.notes.map((note) => {
@@ -39,7 +43,11 @@ const WorkExperienceOrProjectPage = () => {
   return (
     <>
       <div className="main-div flex-row center center-v">
-        <div className="wkexp-project-card z-depth-5">
+        <div
+          className={`wkexp-project-card z-depth-5 ${
+            themeContext.darkMode && 'dark-mode'
+          }`}
+        >
           <div className="wxpjcard-header flex-row">
             <img src={image} alt="" />
             <div className="flex-col center flex-1">

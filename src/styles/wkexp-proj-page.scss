@@ -27,6 +27,18 @@
     text-align: left;
   }
 
+  &.dark-mode {
+    background-color: var(--color-accent);
+
+    h5,
+    h6,
+    p,
+    li {
+      color: var(--color-contrast);
+      text-align: left;
+    }
+  }
+
   // Subsection styles
   .wxpjcard-header {
     img {
