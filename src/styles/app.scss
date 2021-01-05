@@ -30,7 +30,7 @@
 }
 
 * {
-  transition: background-color 0.2s !important;
+  transition: background-color 0.2s, filter 1s 0.2s ease !important;
 }
 
 body {

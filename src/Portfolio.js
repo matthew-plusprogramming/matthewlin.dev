@@ -66,7 +66,12 @@ const Portfolio = () => {
           </div>
 
           <div className="flex-row center">
-            <img id="hero" src={hero} alt="" />
+            <img
+              id="hero"
+              className={themeContext.darkMode && 'dark-mode'}
+              src={hero}
+              alt=""
+            />
           </div>
         </div>
         <div
