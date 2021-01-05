@@ -8,11 +8,12 @@ header {
     position: absolute;
     font-size: 1rem;
     top: 1rem;
-    left: 0.5rem;
+    left: 0;
 
-    transition: opacity 0.5s !important;
+    transition: visibility 0s 0.5s, opacity 0.5s !important;
     &.hovered {
       opacity: 0;
+      visibility: hidden;
     }
   }
 

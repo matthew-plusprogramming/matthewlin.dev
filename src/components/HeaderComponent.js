@@ -58,7 +58,7 @@ const HeaderComponent = (props) => {
                     setDarkTextHovered(true);
                   }}
                 >
-                  ^ try dark mode
+                  &nbsp; ^ try dark mode
                 </p>
                 <button
                   className={`dark-mode-toggle ${!darkMode && 'dark-mode'}`}
