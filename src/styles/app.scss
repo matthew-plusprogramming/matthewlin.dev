@@ -3,10 +3,22 @@
 // Global styles
 :root {
   --color-accent: #17252a;
-  --color-primary-dark: #2b7a78;
-  --color-primary: #3aafa9;
+  --color-primary-dark: #46787a;
+  --color-primary: #72b7c7;
   --color-contrast-light: #feffff;
   --color-contrast: #eef3f1;
+
+  --light-color-accent: #17252a;
+  --light-color-primary-dark: #46787a;
+  --light-color-primary: #72b7c7;
+  --light-color-contrast-light: #feffff;
+  --light-color-contrast: #eef3f1;
+
+  --dark-color-accent: #121212;
+  --dark-color-primary-dark: #46787a;
+  --dark-color-primary: #0c111a;
+  --dark-color-contrast-light: #dddddd;
+  --dark-color-contrast: #d3d3d3;
 
   --color-darken-background: #0a0a0acc;
   --color-selected: #41414130;
@@ -15,6 +27,10 @@
   // Nav variables
   --navbar-height: 5rem;
   --page-height: calc(100vh - var(--navbar-height));
+}
+
+* {
+  transition: background-color 0.2s !important;
 }
 
 body {

@@ -1,21 +1,24 @@
-import React, {useContext, useEffect, useState} from 'react';
-import {useLocation} from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import HeaderComponent from './HeaderComponent';
 import Sidenav from './Sidenav';
 
-import {NavigationContext} from '../contexts/NavigationContext';
+import { NavigationContext } from '../contexts/NavigationContext';
+import { ThemeContext } from '../contexts/ThemeContext';
 
 import '../styles/nav.scss';
 
-import {routes} from './constants';
+import { routes } from './constants';
 
 const Header = () => {
   const [sidenavShowing, setSidenavShowing] = useState(false);
   const [atTop, setAtTop] = useState(true);
   const [mounted, setMounted] = useState(false);
+  const [darkTextHovered, setDarkTextHovered] = useState(false);
 
   const navContext = useContext(NavigationContext);
+  const themeContext = useContext(ThemeContext);
 
   const location = useLocation();
 
@@ -78,6 +81,10 @@ const Header = () => {
           updateNavLocation: navContext.updateNavLocation,
           setSidenavShowing: setSidenavShowing,
           prevRoute: location.pathname,
+          darkMode: themeContext.darkMode,
+          setDarkMode: themeContext.setDarkMode,
+          darkTextHovered: darkTextHovered,
+          setDarkTextHovered: setDarkTextHovered,
         }}
       />
       <Sidenav

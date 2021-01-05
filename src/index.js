@@ -1,20 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import {NavigationContextProvider} from './contexts/NavigationContext';
-import {MaterializeCssContextProvider} from './contexts/MaterializeCssContext';
+import { NavigationContextProvider } from './contexts/NavigationContext';
+import { MaterializeCssContextProvider } from './contexts/MaterializeCssContext';
+import { ThemeContextProvider } from './contexts/ThemeContext';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <MaterializeCssContextProvider>
-        <NavigationContextProvider>
-          <App />
-        </NavigationContextProvider>
-      </MaterializeCssContextProvider>
+      <ThemeContextProvider>
+        <MaterializeCssContextProvider>
+          <NavigationContextProvider>
+            <App />
+          </NavigationContextProvider>
+        </MaterializeCssContextProvider>
+      </ThemeContextProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById('root'),

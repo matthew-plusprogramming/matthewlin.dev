@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './styles/portfolio.scss';
 import './styles/sections.scss';
 
@@ -9,7 +9,11 @@ import CompaniesTiles from './components/TileSections/CompaniesTiles';
 import ProjectsTiles from './components/TileSections/ProjectsTiles';
 import SkillsSection from './components/SkillsSection';
 
+import { ThemeContext } from './contexts/ThemeContext';
+
 const Portfolio = () => {
+  const themeContext = useContext(ThemeContext);
+
   return (
     <>
       <main id="portfolio">
@@ -65,7 +69,10 @@ const Portfolio = () => {
             <img id="hero" src={hero} alt="" />
           </div>
         </div>
-        <div id="about-me-section" className="invert-colors">
+        <div
+          id="about-me-section"
+          className={themeContext.darkMode ? 'dark-mode' : 'invert-colors'}
+        >
           <div className="flex-row center">
             <h4 className="large-bottom-margin medium-text">
               Hi, I'm Matthew, a passionate software developer.

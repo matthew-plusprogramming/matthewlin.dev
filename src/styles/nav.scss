@@ -4,6 +4,37 @@ header {
   // Set navbar size
   height: var(--navbar-height) !important;
 
+  .dark-header-text {
+    position: absolute;
+    font-size: 1rem;
+    top: 1.5rem;
+    left: 0.5rem;
+
+    transition: opacity 0.5s !important;
+    &.hovered {
+      opacity: 0;
+    }
+  }
+
+  .dark-mode-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 1.6rem;
+    color: var(--color-contrast-light);
+    background-color: transparent;
+    border: none;
+    display: flex;
+    padding: 0;
+    &:focus {
+      background-color: transparent;
+    }
+    &.dark-mode {
+      color: var(--color-accent);
+    }
+  }
+
   nav {
     &.shadow {
       box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
