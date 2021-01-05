@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { ThemeContext } from '../../contexts/ThemeContext';
 
 const ImageSection = (props) => {
+  const themeContext = useContext(ThemeContext);
+
   return (
-    <div className="image-section">
+    <div className={`image-section ${themeContext.darkMode && 'dark-mode'}`}>
       <div className="flex-row center image-section-title">
         <h5 className="medium-text">{props.title}</h5>
       </div>

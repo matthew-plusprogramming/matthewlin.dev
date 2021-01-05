@@ -35,6 +35,12 @@
 .image-section {
   flex: 1;
 
+  &.dark-mode {
+    img {
+      filter: brightness(0.8) contrast(1.2);
+    }
+  }
+
   // Responsive styling
   padding: 0 3rem;
   @media #{$medium-and-down} {
