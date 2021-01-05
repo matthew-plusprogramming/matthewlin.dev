@@ -1,5 +1,5 @@
-import React, {useContext} from 'react';
-import {Switch, Route} from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 // Style imports
 import './materialize.scss';
@@ -12,6 +12,7 @@ import Portfolio from './Portfolio';
 import About from './About';
 import Testimonials from './Testimonials';
 import Contact from './Contact';
+import Youtube from './Youtube';
 
 // Component imports
 import Header from './components/HeaderContainer';
@@ -19,7 +20,7 @@ import Footer from './components/Footer';
 import WorkExperienceOrProjectPage from './components/WorkExperienceOrProjectPage';
 
 // Context imports
-import {MaterializeCssContext} from './contexts/MaterializeCssContext';
+import { MaterializeCssContext } from './contexts/MaterializeCssContext';
 
 const App = () => {
   const materializeContext = useContext(MaterializeCssContext);
@@ -43,6 +44,9 @@ const App = () => {
         </Route>
         <Route path={['/work-experience', '/projects']}>
           <WorkExperienceOrProjectPage />
+        </Route>
+        <Route path={['/yt', '/youtube']}>
+          <Youtube />
         </Route>
         <Route path="/">
           <PageNotFound />
