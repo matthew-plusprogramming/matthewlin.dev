@@ -20,7 +20,8 @@ const Contact = () => {
           </div>
           <div
             id="contact-section"
-            className="flex-row flex-container fade-in-after-page-title-load">
+            className="flex-row flex-container fade-in-after-page-title-load"
+          >
             <ContactForm />
             <div id="contact-text">
               <div className="flex-row">
@@ -42,7 +43,8 @@ const Contact = () => {
                     <a
                       href="https://github.com/matthew-plusprogramming"
                       target="_blank"
-                      rel="noopener noreferrer">
+                      rel="noopener noreferrer"
+                    >
                       github.com/matthew-plusprogramming
                     </a>
                   </h5>
@@ -50,7 +52,8 @@ const Contact = () => {
                     <a
                       href="https://linkedin.com/in/matthewlin-sd"
                       target="_blank"
-                      rel="noopener noreferrer">
+                      rel="noopener noreferrer"
+                    >
                       linkedin.com/matthewlin-sd
                     </a>
                   </h5>
@@ -58,7 +61,8 @@ const Contact = () => {
                     <a
                       href="https://www.youtube.com/channel/UCqVIqm9pT-4lH8v2UzkfxIA/"
                       target="_blank"
-                      rel="noopener noreferrer">
+                      rel="noopener noreferrer"
+                    >
                       Matthew Lin
                     </a>
                   </h5>
@@ -66,7 +70,8 @@ const Contact = () => {
                     <a
                       href="https://instagram.com/matthew.plusprogramming"
                       target="_blank"
-                      rel="noopener noreferrer">
+                      rel="noopener noreferrer"
+                    >
                       @matthew.plusprogramming
                     </a>
                   </h5>
@@ -74,7 +79,8 @@ const Contact = () => {
                     <a
                       href="https://twitter.com/mat_thewlin"
                       target="_blank"
-                      rel="noopener noreferrer">
+                      rel="noopener noreferrer"
+                    >
                       @mat_thewlin
                     </a>
                   </h5>

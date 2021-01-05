@@ -1,9 +1,9 @@
-import React, {useContext, useRef, useEffect, useCallback} from 'react';
+import React, { useContext, useRef, useEffect, useCallback } from 'react';
 import './styles/page.scss';
 import './styles/about.scss';
 import './styles/sections.scss';
 
-import {MaterializeCssContext} from './contexts/MaterializeCssContext';
+import { MaterializeCssContext } from './contexts/MaterializeCssContext';
 
 import CompaniesTiles from './components/TileSections/CompaniesTiles';
 import ProjectsTiles from './components/TileSections/ProjectsTiles';
@@ -75,14 +75,16 @@ const About = () => {
           </div>
           <div
             id="about-picture"
-            className="flex-row center fade-in-after-page-title-load">
+            className="flex-row center fade-in-after-page-title-load"
+          >
             <img src={matthew} alt="" />
           </div>
 
           <div className="flex-row center fade-in-after-page-title-load">
             <ImageSection
               title="My current (and future) schools"
-              images={[mbhs, sdccd, berkeley]}>
+              images={[mbhs, sdccd, berkeley]}
+            >
               <span>
                 <ul className="collapsible" ref={schoolsRef}>
                   <li>
@@ -153,7 +155,8 @@ const About = () => {
                       <a
                         href="https://missionbaymusic.com/"
                         target="_blank"
-                        rel="noopener noreferrer">
+                        rel="noopener noreferrer"
+                      >
                         my school's symphony orchestra.
                       </a>{' '}
                       Outside of school, I enjoy playing the violin and piano
@@ -172,7 +175,8 @@ const About = () => {
                       <a
                         href="https://team4160.com/"
                         target="_blank"
-                        rel="noopener noreferrer">
+                        rel="noopener noreferrer"
+                      >
                         my school's robotics team.
                       </a>{' '}
                       We compete annually in FRC (First Robotics Competition)

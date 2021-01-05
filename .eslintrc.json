@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "google",
+    "prettier",
+    "plugin:react/recommended"
+  ],
+  "plugins": [
+    "prettier",
+    "react"
+  ],
+  "rules": {
+    "no-unused-vars": "warn",
+    "prefer-const": "warn",
+    "eqeqeq": "warn",
+    "require-jsdoc": "warn",
+    "react/prop-types": 0,
+    "react/no-unescaped-entities": "warn",
+    "new-cap": "warn"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true
+  }
+}

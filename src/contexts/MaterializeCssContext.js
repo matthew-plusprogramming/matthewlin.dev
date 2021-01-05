@@ -1,4 +1,4 @@
-import React, {createContext} from 'react';
+import React, { createContext } from 'react';
 
 // On component did mount m init
 import M from 'materialize-css';
@@ -24,10 +24,11 @@ const MaterializeCssContextProvider = (props) => {
       value={{
         materializeReinit: materializeReinit,
         M: M,
-      }}>
+      }}
+    >
       {props.children}
     </MaterializeCssContext.Provider>
   );
 };
 
-export {MaterializeCssContextProvider, MaterializeCssContext};
+export { MaterializeCssContextProvider, MaterializeCssContext };

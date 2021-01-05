@@ -16,7 +16,8 @@ const CompaniesTiles = () => (
           img: robolink,
           title: 'Robolink',
           path: '/work-experience/robolink',
-        }}>
+        }}
+      >
         Teaching STEM to kids of all ages. Holds year around robotics camps &
         produces educational STEM materials.
       </HoverTile>
@@ -26,7 +27,8 @@ const CompaniesTiles = () => (
           img: programination,
           title: 'Programination',
           path: '/work-experience/programination',
-        }}>
+        }}
+      >
         Creating high quality web and mobile applications of all kinds for
         clients.
       </HoverTile>

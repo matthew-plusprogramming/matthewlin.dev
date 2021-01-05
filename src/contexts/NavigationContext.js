@@ -1,6 +1,6 @@
-import React, {createContext, useRef} from 'react';
+import React, { createContext, useRef } from 'react';
 
-import {routes} from '../components/constants';
+import { routes } from '../components/constants';
 
 const NavigationContext = createContext();
 
@@ -87,8 +87,8 @@ const NavigationContextProvider = (props) => {
         if (document.scrollingElement.scrollTop === 0) return;
 
         const cosParameter = document.scrollingElement.scrollTop / 2;
-        let scrollCount = 0,
-          oldTimestamp = null;
+        let scrollCount = 0;
+        let oldTimestamp = null;
 
         function step(newTimestamp) {
           if (oldTimestamp !== null) {
@@ -118,10 +118,11 @@ const NavigationContextProvider = (props) => {
         testimonialsLinkRef: testimonialsLinkRef,
         contactLinkRef: contactLinkRef,
         updateNavLocation: updateNavLocation,
-      }}>
+      }}
+    >
       {props.children}
     </NavigationContext.Provider>
   );
 };
 
-export {NavigationContextProvider, NavigationContext};
+export { NavigationContextProvider, NavigationContext };

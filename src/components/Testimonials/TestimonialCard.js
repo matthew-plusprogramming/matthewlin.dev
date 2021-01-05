@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TestimonialCard = (props) => {
-  const {employment, formerEmployment} = props;
+  const { employment, formerEmployment } = props;
 
   // Calculate employment jsx
   let credential = [];
@@ -27,7 +27,8 @@ const TestimonialCard = (props) => {
             <a
               href={formerEmployment[i + 2]}
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+            >
               {formerEmployment[i + 1]}
             </a>
           </i>

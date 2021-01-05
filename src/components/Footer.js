@@ -1,11 +1,11 @@
-import React, {useContext} from 'react';
-import {Link, useLocation} from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-import {NavigationContext} from '../contexts/NavigationContext';
+import { NavigationContext } from '../contexts/NavigationContext';
 
 import '../styles/footer.scss';
 
-import {routes} from './constants';
+import { routes } from './constants';
 
 const Footer = () => {
   const navContext = useContext(NavigationContext);
@@ -44,7 +44,8 @@ const Footer = () => {
                     location.pathname === routes.about
                       ? 'footer-selected'
                       : undefined
-                  }>
+                  }
+                >
                   About
                 </Link>
               </h6>
@@ -63,7 +64,8 @@ const Footer = () => {
                     location.pathname === routes.portfolio
                       ? 'footer-selected'
                       : undefined
-                  }>
+                  }
+                >
                   Portfolio
                 </Link>
               </h6>
@@ -82,7 +84,8 @@ const Footer = () => {
                     location.pathname === routes.testimonials
                       ? 'footer-selected'
                       : undefined
-                  }>
+                  }
+                >
                   Testimonials
                 </Link>
               </h6>
@@ -101,7 +104,8 @@ const Footer = () => {
                     location.pathname === routes.contact
                       ? 'footer-selected'
                       : undefined
-                  }>
+                  }
+                >
                   Contact
                 </Link>
               </h6>
@@ -116,7 +120,8 @@ const Footer = () => {
                 <a
                   href="https://github.com/matthew-plusprogramming"
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   Github
                 </a>
               </h6>
@@ -124,7 +129,8 @@ const Footer = () => {
                 <a
                   href="https://linkedin.com/in/matthewlin-sd"
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   LinkedIn
                 </a>
               </h6>
@@ -132,7 +138,8 @@ const Footer = () => {
                 <a
                   href="https://www.youtube.com/channel/UCqVIqm9pT-4lH8v2UzkfxIA/"
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   YouTube
                 </a>
               </h6>
@@ -140,7 +147,8 @@ const Footer = () => {
                 <a
                   href="https://instagram.com/matthew.plusprogramming"
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   Instagram
                 </a>
               </h6>
@@ -148,7 +156,8 @@ const Footer = () => {
                 <a
                   href="https://twitter.com/mat_thewlin"
                   target="_blank"
-                  rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   Twitter
                 </a>
               </h6>
