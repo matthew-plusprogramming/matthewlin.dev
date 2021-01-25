@@ -45,7 +45,7 @@ header {
     &:not(.shadow) {
       box-shadow: none;
     }
-    transition: box-shadow 0.35s ease-in-out;
+    transition: box-shadow 0.35s ease-in-out, background-color 0.2s;
     // Display nav as flex
     display: flex;
     justify-content: flex-end;
