@@ -77,7 +77,7 @@ const Testimonials = () => {
               employment={[
                 'Vice Principal',
                 'Morse High School',
-                'https://www.sandiegounified.org/schools/morse/vice-principal-ms-duren',
+                'https://morse.sandiegounified.org/cms/one.aspx?portalId=27933464&pageId=29823268',
               ]}
               formerEmployment={[
                 'Teacher',
