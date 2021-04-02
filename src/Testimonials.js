@@ -56,6 +56,11 @@ const Testimonials = () => {
                 'Professor',
                 'UCSD Extension',
                 'https://extension.ucsd.edu/about-extension/raymond-mitchell-iii',
+                'Senior Software Engineering Manager',
+                'Accenture',
+                'http://accenture.com/',
+              ]}
+              formerEmployment={[
                 'Director of Software Engineering',
                 'Fairway Technologies',
                 'https://fairwaytech.com/',
