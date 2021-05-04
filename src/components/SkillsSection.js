@@ -18,7 +18,7 @@ const SkillsSection = () => {
       </div>
       <div className="flex-row flex-container center">
         <h5 className="large-bottom-margin">
-          I have spent ~4.5 years exploring, learning, and creating as much as I
+          I have spent ~5 years exploring, learning, and creating as much as I
           can in the software engineering world. Here are some of my skills!
         </h5>
       </div>
@@ -33,7 +33,7 @@ const SkillsSection = () => {
               <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: ~2</strong>
+              <strong is="custom">Years of Experience: ~2.5</strong>
               <br />I have worked extensively with HTML and CSS both on personal
               and professional projects.
             </div>
@@ -44,7 +44,7 @@ const SkillsSection = () => {
               <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: ~0.5</strong>
+              <strong is="custom">Years of Experience: ~1</strong>
               <br />I use and have used ReactJS in a variety of projects both
               personal and professional. For example, as a SWE at{' '}
               <a href="/work-experience/programination" className="white-link">
@@ -61,7 +61,7 @@ const SkillsSection = () => {
               <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: ~0.5</strong>
+              <strong is="custom">Years of Experience: ~1</strong>
               <br />
               As listed in the above React section, I've used React Native for
               various internal and client projects at{' '}
@@ -108,7 +108,7 @@ const SkillsSection = () => {
               <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: ~2</strong>
+              <strong is="custom">Years of Experience: ~2.5</strong>
               <br />I have worked extensively with NodeJS both on personal and
               professional projects. I have experience implementing several
               different types of backends including REST APIs and GraphQL APIs.
@@ -124,7 +124,7 @@ const SkillsSection = () => {
               <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: ~1.0</strong>
+              <strong is="custom">Years of Experience: ~1.5</strong>
               <br />I have created many webservers using the ExpressJS library
               for both personal and professional projects. I have implemented
               REST and GraphQL backends using express in conjunction with
@@ -137,7 +137,7 @@ const SkillsSection = () => {
               <img src={TwoArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: ~0.5</strong>
+              <strong is="custom">Years of Experience: ~1</strong>
               <br />I use MongoDB as my database of choice as my preferred tech
               stack is the MERN stack (Mongo, Express, React, NodeJs).
             </div>
@@ -148,7 +148,7 @@ const SkillsSection = () => {
               <img src={TwoArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: ~0.5</strong>
+              <strong is="custom">Years of Experience: ~1</strong>
               <br />I have used Postgres alongside GraphQL in various internal
               and client projects at{' '}
               <a href="/work-experience/programination" className="white-link">
@@ -197,7 +197,7 @@ const SkillsSection = () => {
               <img src={ThreeArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: ~2.5</strong>
+              <strong is="custom">Years of Experience: ~3</strong>
               <br />I have been using Git for the last few years in order to
               manage my personal projects. In addition to this, I got to learn
               how to use Git in a professional/large team environment during one
@@ -226,7 +226,7 @@ const SkillsSection = () => {
               <img src={TwoArrow} alt="" />
             </div>
             <div className="collapsible-body">
-              <strong is="custom">Years of Experience: ~0.5</strong>
+              <strong is="custom">Years of Experience: ~1</strong>
               <br />I have used GraphQL alongside Postgres in several projects
               at{' '}
               <a href="/work-experience/programination" className="white-link">

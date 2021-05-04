@@ -85,7 +85,7 @@ const Portfolio = () => {
           </div>
           <div className="flex-row center large-bottom-margin">
             <p className="flow-text">
-              Since beginning my journey as a budding programmer almost four
+              Since beginning my journey as a budding programmer almost five
               years ago, I've explored a wide range of computer science related
               fields, studied many of them, and worked on various personal and
               freelance programming projects. In addition to theoretical and
