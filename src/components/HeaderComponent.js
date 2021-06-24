@@ -94,7 +94,9 @@ const HeaderComponent = (props) => {
           <li>
             <Link
               to={routes.about}
-              onClick={() => updateNavLocation(routes.about, false, true)}
+              onClick={() =>
+                updateNavLocation(routes.about, false, true, prevRoute)
+              }
               ref={aboutLinkRef}
             >
               About
@@ -103,7 +105,9 @@ const HeaderComponent = (props) => {
           <li>
             <Link
               to={routes.portfolio}
-              onClick={() => updateNavLocation(routes.portfolio, false, true)}
+              onClick={() =>
+                updateNavLocation(routes.portfolio, false, true, prevRoute)
+              }
               ref={portfolioLinkRef}
             >
               Portfolio
@@ -113,7 +117,7 @@ const HeaderComponent = (props) => {
             <Link
               to={routes.testimonials}
               onClick={() =>
-                updateNavLocation(routes.testimonials, false, true)
+                updateNavLocation(routes.testimonials, false, true, prevRoute)
               }
               ref={testimonialsLinkRef}
             >
@@ -123,7 +127,9 @@ const HeaderComponent = (props) => {
           <li>
             <Link
               to={routes.contact}
-              onClick={() => updateNavLocation(routes.contact, false, true)}
+              onClick={() =>
+                updateNavLocation(routes.contact, false, true, prevRoute)
+              }
               ref={contactLinkRef}
             >
               Contact
