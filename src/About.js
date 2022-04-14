@@ -17,6 +17,7 @@ import berkeley from './res/about/berkeley.png';
 import cc from './res/about/cc.png';
 import first from './res/about/first.png';
 import music from './res/about/music.png';
+import cp from './res/about/cp.png';
 
 const About = () => {
   const materializeContext = useContext(MaterializeCssContext);
@@ -83,7 +84,7 @@ const About = () => {
           <div className="flex-row center fade-in-after-page-title-load">
             <ImageSection
               title="My current schools"
-              images={[mbhs, sdccd]}
+              images={[mbhs, sdccd, cp]}
             >
               <span>
                 <ul className="collapsible" ref={schoolsRef}>
@@ -115,6 +116,14 @@ const About = () => {
                       completed/am in the process of completing{' '}
                       <emphasize is="custom">60/60</emphasize> of my required
                       credits.
+                    </div>
+                  </li>
+                  <li>
+                    <div className="collapsible-header">
+                      <bold is="custom">Cal Poly</bold>
+                    </div>{' '}
+                    <div className="collapsible-body">
+                      I will be attending Cal Poly SLO in the fall of 2022 majoring in Computer Science!
                     </div>
                   </li>
                 </ul>
