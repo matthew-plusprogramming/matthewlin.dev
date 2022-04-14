@@ -83,7 +83,7 @@ const About = () => {
           <div className="flex-row center fade-in-after-page-title-load">
             <ImageSection
               title="My current (and future) schools"
-              images={[mbhs, sdccd, berkeley]}
+              images={[mbhs, sdccd]}
             >
               <span>
                 <ul className="collapsible" ref={schoolsRef}>
