@@ -92,12 +92,12 @@ const About = () => {
                       <bold is="custom">MBHS</bold>
                     </div>
                     <div className="collapsible-body">
-                      I am currently a Junior at Mission Bay High School. I
+                      I am currently a Senior at Mission Bay High School. I
                       currently take part in many extracurriculars that I love
                       doing (most listed to the right). I am a co-founder of the
                       Mission Bay High School Entrepreneurship Club and
                       academically, I currently hold a{' '}
-                      <emphasize is="custom">cumulative 4.77 GPA.</emphasize>
+                      <emphasize is="custom">cumulative 4.83 GPA.</emphasize>
                     </div>
                   </li>
                   <li>
@@ -113,21 +113,8 @@ const About = () => {
                       I currently hold a{' '}
                       <emphasize is="custom">4.0 GPA</emphasize> and have
                       completed/am in the process of completing{' '}
-                      <emphasize is="custom">51/60</emphasize> of my required
+                      <emphasize is="custom">60/60</emphasize> of my required
                       credits.
-                    </div>
-                  </li>
-                  <li>
-                    <div className="collapsible-header">
-                      <bold is="custom">Berkeley</bold>
-                    </div>
-                    <div className="collapsible-body">
-                      Berkeley is my dream school! I wish to attend Berkeley
-                      studying computer science, and I love the school for many
-                      reasons including its reknown computer science program,
-                      its location in my home state (California), and its
-                      proximity to Silicon Valley which may bring many
-                      opportunities in the future!
                     </div>
                   </li>
                 </ul>
