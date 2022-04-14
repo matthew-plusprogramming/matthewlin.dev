@@ -15,7 +15,7 @@ const Contact = () => {
           <div className="flex-row center fade-in-after-page-title-load flex-container large-bottom-margin">
             <h5>
               I would love to hear from you! You can reach me with the contact
-              form or via one of the methods below.
+              form or via one of the methods below. <strong>(As of 04/13/2022 the form is temporarily down and will not send to me. Please use one of the methods below!)</strong>
             </h5>
           </div>
           <div
