@@ -82,7 +82,7 @@ const About = () => {
 
           <div className="flex-row center fade-in-after-page-title-load">
             <ImageSection
-              title="My current (and future) schools"
+              title="My current schools"
               images={[mbhs, sdccd]}
             >
               <span>
