@@ -26,6 +26,8 @@ const Portfolio = () => {
           <div className="flex-row center bottom-margin">
             <h5 className="light-text">
               I create high quality web/desktop/mobile apps and more!
+              <br />
+              Disclaimer: this site has not been substantially updated in 2 years, all of my time coding currently goes into my job as a software engineer 
             </h5>
           </div>
           <div className="flex-row center bottom-margin">
