@@ -26,8 +26,6 @@ const Portfolio = () => {
           <div className="flex-row center bottom-margin">
             <h5 className="light-text">
               I create high quality web/desktop/mobile apps and more!
-              <br />
-              Disclaimer: this site has not been substantially updated in 2 years, all of my time coding currently goes into my job as a software engineer 
             </h5>
           </div>
           <div className="flex-row center bottom-margin">
@@ -87,12 +85,12 @@ const Portfolio = () => {
           </div>
           <div className="flex-row center large-bottom-margin">
             <p className="flow-text">
-              Since beginning my journey as a budding programmer almost five
+              Since beginning my journey as a budding programmer over five
               years ago, I've explored a wide range of computer science related
               fields, studied many of them, and worked on various personal and
               freelance programming projects. In addition to theoretical and
-              personal practical knowledge, I also have two summers of
-              professional work experience as a software engineer.
+              personal practical knowledge, I also have <n>nearly two full years</n>
+              of professional work experience as a software engineer.
             </p>
           </div>
           <div className="flex-row center large-bottom-margin">
@@ -104,9 +102,9 @@ const Portfolio = () => {
             </p>
           </div>
         </div>
-        <SkillsSection />
-        <CompaniesTiles />
-        <ProjectsTiles />
+        {/* <SkillsSection /> */}
+        {/* <CompaniesTiles /> */}
+        {/* <ProjectsTiles /> */}
       </main>
     </>
   );

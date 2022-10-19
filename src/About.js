@@ -12,8 +12,7 @@ import SkillsSection from './components/SkillsSection';
 
 import mbhs from './res/about/mbhs.jpg';
 import sdccd from './res/about/sdccd.png';
-import matthew from './res/about/matthew.jpg';
-import berkeley from './res/about/berkeley.png';
+import matthew from './res/about/matthew.png';
 import cc from './res/about/cc.png';
 import first from './res/about/first.png';
 import music from './res/about/music.png';
@@ -83,22 +82,19 @@ const About = () => {
 
           <div className="flex-row center fade-in-after-page-title-load">
             <ImageSection
-              title="My current schools"
-              images={[mbhs, sdccd, cp]}
+              title="My current (and former) schools"
+              images={[cp, sdccd, mbhs]}
             >
               <span>
                 <ul className="collapsible" ref={schoolsRef}>
                   <li>
                     <div className="collapsible-header">
-                      <bold is="custom">MBHS</bold>
-                    </div>
+                      <bold is="custom">Cal Poly</bold>
+                    </div>{' '}
                     <div className="collapsible-body">
-                      I am currently a Senior at Mission Bay High School. I
-                      currently take part in many extracurriculars that I love
-                      doing (most listed to the right). I am a co-founder of the
-                      Mission Bay High School Entrepreneurship Club and
-                      academically, I currently hold a{' '}
-                      <emphasize is="custom">cumulative 4.83 GPA.</emphasize>
+                      I am a current first year (although I currently hold junior
+                      status by credits) at Cal Poly SLO. I am studying Computer
+                      Science!
                     </div>
                   </li>
                   <li>
@@ -106,42 +102,32 @@ const About = () => {
                       <bold is="custom">SDCCD</bold>
                     </div>{' '}
                     <div className="collapsible-body">
-                      I am currently a student in the San Diego Community
-                      College District pursuing an{' '}
+                      I graduated with an{' '}
                       <emphasize is="custom">
                         Associate Degree of Science in Computer Science.
                       </emphasize>{' '}
-                      I currently hold a{' '}
-                      <emphasize is="custom">4.0 GPA</emphasize> and have
-                      completed/am in the process of completing{' '}
-                      <emphasize is="custom">60/60</emphasize> of my required
-                      credits.
+                      while still a senior at MBHS
                     </div>
                   </li>
                   <li>
                     <div className="collapsible-header">
-                      <bold is="custom">Cal Poly</bold>
-                    </div>{' '}
+                      <bold is="custom">MBHS</bold>
+                    </div>
                     <div className="collapsible-body">
-                      I will be attending Cal Poly SLO in the fall of 2022 majoring in Computer Science!
+                      I first made this portfolio website as a junior at Mission
+                      Bay High School and for the most part, only the content of
+                      the site has changed with most of the design remaining
+                      true to the original made two years ago. I graduated as
+                      one of the top students with a
+                      <emphasize is="custom">cumulative 4.83 GPA.</emphasize>
                     </div>
                   </li>
                 </ul>
               </span>
             </ImageSection>
-            <ImageSection title="My groups" images={[cc, music, first]}>
+            <ImageSection title="My current (and former) groups" images={[music, cc, first]}>
               <span>
                 <ul className="collapsible" ref={groupsRef}>
-                  <li>
-                    <div className="collapsible-header">
-                      <bold is="custom">Cross Country/Track & Field</bold>
-                    </div>
-                    <div className="collapsible-body">
-                      I am currently a member of my school's Track & Field and
-                      Cross Country teams. I enjoy running as a sport and to
-                      stay healthy!
-                    </div>
-                  </li>
                   <li>
                     <div className="collapsible-header">
                       <bold is="custom">Music</bold>
@@ -149,17 +135,27 @@ const About = () => {
                     <div className="collapsible-body">
                       I am currently a violinist in{' '}
                       <a
-                        href="https://missionbaymusic.com/"
+                        href="https://symphony.calpoly.edu/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         my school's symphony orchestra.
                       </a>{' '}
                       Outside of school, I enjoy playing the violin and piano
-                      which I have been learning for three and five years
+                      which I have been learning for six and eight years
                       respectively. I also played the violin in my district's
-                      honor ensemble for one year in middle school and one year
-                      in high school so far.
+                      honor ensemble for one year in middle school and two years
+                      in high school.
+                    </div>
+                  </li>
+                  <li>
+                    <div className="collapsible-header">
+                      <bold is="custom">Cross Country/Track & Field</bold>
+                    </div>
+                    <div className="collapsible-body">
+                      I was previously a member of my school's Track & Field and
+                      Cross Country teams. I enjoy running as a sport and to
+                      stay healthy!
                     </div>
                   </li>
                   <li>
@@ -167,7 +163,7 @@ const About = () => {
                       <bold is="custom">Robotics</bold>
                     </div>
                     <div className="collapsible-body">
-                      I am one of the student leaders on{' '}
+                      I was previously one of the student leaders on{' '}
                       <a
                         href="https://team4160.com/"
                         target="_blank"
@@ -190,9 +186,9 @@ const About = () => {
             </ImageSection>
           </div>
         </div>
-        <SkillsSection />
-        <CompaniesTiles />
-        <ProjectsTiles />
+        {/* <SkillsSection /> */}
+        {/* <CompaniesTiles /> */}
+        {/* <ProjectsTiles /> */}
       </main>
     </>
   );

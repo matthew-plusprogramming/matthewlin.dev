@@ -14,15 +14,13 @@ const Contact = () => {
           </div>
           <div className="flex-row center fade-in-after-page-title-load flex-container large-bottom-margin">
             <h5>
-              I would love to hear from you! You can reach me with the contact
-              form or via one of the methods below. <strong>(As of 04/13/2022 the form is temporarily down and will not send to me. Please use one of the methods below!)</strong>
+              I would love to hear from you! You can reach me via one of the methods below.
             </h5>
           </div>
           <div
             id="contact-section"
             className="flex-row flex-container fade-in-after-page-title-load"
           >
-            <ContactForm />
             <div id="contact-text">
               <div className="flex-row">
                 <div className="flex-col">
